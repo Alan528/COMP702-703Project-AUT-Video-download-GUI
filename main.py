@@ -25,4 +25,4 @@ class App:
         tb = tk.Radiobutton(frame_1,text='only way',variable=self.url, value=1, width=10,height=3)
 
         lable1 = tk.Label(fram_2,text='Please input the url')
-        entry = tk.Entry(fram_2,textvariable=self.url, highlightcolor='Fuchsia',highli)
+        entry = tk.Entry(fram_2,textvariable=self.url, highlightcolor='Fuchsia',)
