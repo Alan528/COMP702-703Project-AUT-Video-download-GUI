@@ -66,7 +66,7 @@ def audio_video_add(title):
 
 if __name__ == "__main__":
     while True:
-        value = input('Please input video link quite to exic）')
+        value = input('Please input video link quit to exic）')
         if value == 'quit':
             break
         else:
