@@ -7,7 +7,7 @@ import os
 
 def get_title_json(url):
     head = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.67'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.67' #添加ua让系统识别你是台电脑
     }
     r = requests.get(url, headers=head)
 
@@ -44,7 +44,7 @@ def download(title, audio_url, video_url):
         f.write(audio_data)
     print('Audio download complete')
 
-    print('Start to download vedio')
+    print('Start to download video')
     print('Downloading')
     r_video = requests.get(url=video_url, headers=head)
     video_data = r_video.content
