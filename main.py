@@ -1,12 +1,18 @@
+import BilibiliSP
+import YoutubeSp
 import re
 
-value = input("Please input the link ")
-Bilibili_checkurl = "www.bilibili.com"
-Youtube_checkurl = "www.youtube.com"
-url=value
+
 if __name__ == '__main__':
 
-    if re.findall(Bilibili_checkurl, value):
-        import BilibiliSP
-    # elif re.findall(Youtube_checkurl, url):
-    #     import YoutubeSp
+        bilibili_checkurl = "www.bilibili.com"
+        youtube_checkurl = "www.youtube.com"
+        while True:
+            value = input("Please input you link: ")
+
+            if re.findall(bilibili_checkurl, value):
+                BilibiliSP.bilibili(value)
+            elif re.findall(youtube_checkurl, value):
+                YoutubeSp.youtube(value)
+            else:
+                print("Please input a Bilibili or Youtube link")
