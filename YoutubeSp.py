@@ -30,21 +30,21 @@ def youtube(url):
                 title = title.replace(i, '')
             print(f'Video Title："{title}"')
 
-            # print("Downloading...")
-            # video = requests.get(videourl)
-            # with open(f'{title}.mp4', mode='wb') as f:
-            #     f.write(video.content)
-            #
-            # audio = requests.get(audiourl)
-            # with open(f'{title}.mp3', mode='wb') as f:
-            #     f.write(audio.content)
-            #
-            # # 调用cmd执行ffmpeg程序来合并音频和视频
-            # cmd = f'ffmpeg -i "{title}.mp4" -i "{title}.mp3" -c:v copy -c:a aac -strict -2 "Youtube{title}.mp4"'
-            # os.system(cmd)
-            #
-            # # 删除原来的音频和视频
-            # os.remove(title + '.mp4')
-            # os.remove(title + '.mp3')
-            # print('Download completed')
+            print("Downloading...")
+            video = requests.get(videourl)
+            with open(f'{title}.mp4', mode='wb') as f:
+                f.write(video.content)
+
+            audio = requests.get(audiourl)
+            with open(f'{title}.mp3', mode='wb') as f:
+                f.write(audio.content)
+
+            # 调用cmd执行ffmpeg程序来合并音频和视频
+            cmd = f'ffmpeg -i "{title}.mp4" -i "{title}.mp3" -c:v copy -c:a aac -strict -2 "Youtube{title}.mp4"'
+            os.system(cmd)
+
+            # 删除原来的音频和视频
+            os.remove(title + '.mp4')
+            os.remove(title + '.mp3')
+            print('Download completed')
 
