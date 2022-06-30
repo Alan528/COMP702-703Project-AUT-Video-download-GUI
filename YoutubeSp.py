@@ -1,10 +1,12 @@
 import json
+import shutil
+
 import requests
 import re
 import os
 
 
-def youtube(url, userinput):
+def youtube(url, utype):
     headers = {
         'cookie': 'VISITOR_INFO1_LIVE=En-lfqNNXQw; PREF=tz=Asia.Hong_Kong&f4=4000000&f5=30000; GPS=1; YSC=o1EVGXJ0H7I',
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.124 Safari/537.36',
@@ -33,7 +35,7 @@ def youtube(url, userinput):
         video = requests.get(videourl)
         audio = requests.get(audiourl)
 
-        if userinput == "1":
+        if utype == "1":
             with open(f'{title}.mp4', mode='wb') as f:
                 f.write(video.content)
 
@@ -45,19 +47,24 @@ def youtube(url, userinput):
             cmd = f'ffmpeg -i "{title}.mp4" -i "{title}.mp3" -c:v copy -c:a aac -strict -2 "Youtube_{title}.mp4"'
             os.system(cmd)
 
+            # 把视频移到Download目录
+            shutil.move(f'.\\Youtube_{title}.mp4', '.\\Download')
+
             # 删除原来的音频和视频
             os.remove(title + '.mp4')
             os.remove(title + '.mp3')
             print('Download completed')
 
-        elif userinput == "2":
-            with open(f'{title}_Youtube.mp4', mode='wb') as f:
+        elif utype == "2":
+            with open(f'{title}.mp4', mode='wb') as f:
                 f.write(video.content)
+            shutil.move(f'.\\{title}.mp4', '.\\Download')
             print('Download completed')
 
-        elif userinput == "3":
-            with open(f'{title}_Youtube.mp3', mode='wb') as f:
+        elif utype == "3":
+            with open(f'{title}.mp3', mode='wb') as f:
                 f.write(audio.content)
+            shutil.move(f'.\\{title}.mp3', '.\\Download')
             print('Download completed')
 
 
