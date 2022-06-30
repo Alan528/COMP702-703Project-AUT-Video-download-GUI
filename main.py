@@ -12,7 +12,6 @@ def btn_clicked():
     youtube_checkurl = "www.youtube.com"
 
     value = var_link.get()
-    # utype = var_type.get()
     utype = '1'
 
     # userinput = input("1. MP4(Has Sound) 2. MP4(No Sound) 3. MP3: ")
