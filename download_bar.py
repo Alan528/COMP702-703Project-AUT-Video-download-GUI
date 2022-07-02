@@ -1,14 +1,15 @@
 # Import the libraries file
 import BilibiliSP as bs
 import YoutubeSp as ys
+import main
 from libraries import *
 from notification_screen import *
-import main
+from main import *
 import re
+
 #purpose of this global variable is let the system know which button has been clicked 
 # and called exactly that function for downloading
 flag = 0
-
 bilibili_checkurl = "www.bilibili.com"
 youtube_checkurl = "www.youtube.com"
 
@@ -115,7 +116,7 @@ class download(object):
 
     #function for downloading mp4 has sound, when user click on mp4 has sound button
     def dl_mp4_has_sound(self):
-        
+
         flag = 1
         print("MP4 has sound button clicked")
         print("value button:", flag, "\n\n")
@@ -152,6 +153,10 @@ class download(object):
         print("MP4 no sound button clicked")
         print("value button:", flag, "\n\n")
 
+        if re.findall(bilibili_checkurl, inp):
+            bs.bilibili(inp, str(flag))  # make sure that where is the link value
+        elif re.findall(youtube_checkurl, inp):
+            ys.youtube(inp, str(flag))  # make sure that where is the link value
         
         #make download bar running
         task = 10
@@ -178,6 +183,11 @@ class download(object):
         flag = 3
         print("MP3 button clicked")
         print("value button:", flag, "\n\n")
+
+        if re.findall(bilibili_checkurl, inp):
+            bs.bilibili(inp, str(flag))  # make sure that where is the link value
+        elif re.findall(youtube_checkurl, inp):
+            ys.youtube(inp, str(flag))  # make sure that where is the link value
 
         #make download bar running
         task = 10

@@ -3,27 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8a1210cc-fac9-482b-9fe5-cdee0bbffcc2" name="Changes" comment="Bilibili Download">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CheckVideo.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckVideo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/download_bar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/btt_bilibili.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/btt_youtube.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/complete_icon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/download_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/download_icon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/error_icon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/exit_btt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/exit_red_btt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/interface.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/main_page_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/main_page_cancel_btt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/main_page_download_btt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/main_page_textBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/mp3_btt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/mp4_has_sound_btt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/mp4_no_sound_btt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/libraries.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD/notification_screen.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/download_bar.py" beforeDir="false" afterPath="$PROJECT_DIR$/download_bar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
