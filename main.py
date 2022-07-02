@@ -8,7 +8,6 @@ from download_bar import *
 from importlib.resources import path
 from tkinter import *
 import CheckVideo
-# def btn_clicked():
 
 
 if __name__ == '__main__':
@@ -143,7 +142,6 @@ if __name__ == '__main__':
                 except:
                     window_load = invalue_input_bilibili_exist(self.top)
 
-
             elif re.findall(youtube_checkurl, inp):
 
                 try:
@@ -155,6 +153,7 @@ if __name__ == '__main__':
                 print("Button download Clicked\n\n")
             else:
                 windown_download = invalue_input(self.top)
+            return inp
 
         # Open youtube website when user clicked
         def btn_youtube_clicked(self):
@@ -172,8 +171,6 @@ if __name__ == '__main__':
             print("value input in textbox:" + inp + "\n")
             windown_download = invalue_input(self.top)
             print("Button for 3rd platform Clicked\n\n")
-
-
 
     root = Tk()
     root.resizable(False, False)
