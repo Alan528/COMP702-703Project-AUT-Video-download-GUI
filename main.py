@@ -5,13 +5,11 @@ import tkinter as tk
 from libraries import *
 from notification_screen import *
 from download_bar import *
-
 from importlib.resources import path
 from tkinter import *
 import CheckVideo
-
 # def btn_clicked():
-#
+
 
 
 if __name__ == '__main__':

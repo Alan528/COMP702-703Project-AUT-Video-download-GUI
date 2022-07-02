@@ -3,18 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="8a1210cc-fac9-482b-9fe5-cdee0bbffcc2" name="Changes" comment="Bilibili Download">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BilibiliSP.py" beforeDir="false" afterPath="$PROJECT_DIR$/BilibiliSP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_RnD.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YoutubeSp.py" beforeDir="false" afterPath="$PROJECT_DIR$/YoutubeSp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bilibili-cancel-button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bilibili-download-button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bilibili-platform-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bilibili_textBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/download_icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/image/download_icon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckVideo.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckVideo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/download_bar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/btt_bilibili.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/btt_youtube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/complete_icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/download_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/download_icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/error_icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/exit_btt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/exit_red_btt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/interface.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/main_page_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/main_page_cancel_btt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/main_page_download_btt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/main_page_textBox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/mp3_btt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/mp4_has_sound_btt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/image/mp4_no_sound_btt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/libraries.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI_RnD/notification_screen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/download_bar.py" beforeDir="false" afterPath="$PROJECT_DIR$/download_bar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,27 +81,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="BackendValue" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="b站视频爬虫" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BackendValue.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="BilibiliSP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="b站视频爬虫" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,6 +94,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BilibiliSP.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="download_bar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="b站视频爬虫" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/download_bar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,19 +166,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.download_bar" />
       <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.Backend test" />
-      <item itemvalue="Python.BackendValue" />
       <item itemvalue="Python.BilibiliSP" />
       <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.download_bar" />
         <item itemvalue="Python.Backend test" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.BilibiliSP" />
-        <item itemvalue="Python.BackendValue" />
       </list>
     </recent_temporary>
   </component>
