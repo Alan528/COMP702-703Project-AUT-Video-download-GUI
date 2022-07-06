@@ -153,7 +153,6 @@ if __name__ == '__main__':
                 print("Button download Clicked\n\n")
             else:
                 windown_download = invalue_input(self.top)
-            return inp
 
         # Open youtube website when user clicked
         def btn_youtube_clicked(self):

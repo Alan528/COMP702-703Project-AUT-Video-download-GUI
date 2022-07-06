@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8a1210cc-fac9-482b-9fe5-cdee0bbffcc2" name="Changes" comment="Bilibili Download">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download_bar.py" beforeDir="false" afterPath="$PROJECT_DIR$/download_bar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.Backend test">
+  <component name="RunManager" selected="Python.main">
     <configuration name="Backend test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="b站视频爬虫" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,11 +153,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Backend test" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.YoutubeSp" />
-        <item itemvalue="Python.BilibiliSP" />
         <item itemvalue="Python.download_bar" />
+        <item itemvalue="Python.BilibiliSP" />
+        <item itemvalue="Python.Backend test" />
+        <item itemvalue="Python.YoutubeSp" />
       </list>
     </recent_temporary>
   </component>
