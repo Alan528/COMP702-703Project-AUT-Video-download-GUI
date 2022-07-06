@@ -1,7 +1,7 @@
 import requests
 import re
 
-url = 'https://www.douyin.com/video/7050822702839368991'
+url = 'https://www.douyin.com/discover?modal_id=7100845004720966919&redirect=-1'
 
 headers = {
 
@@ -21,4 +21,6 @@ print(video_url)
 video_content = requests.get(url=video_url,headers=headers).content
 with open(title + '.mp4', mode='wb') as f:
    f.write(video_content)
+
+print("Complete Download")
 
