@@ -13,9 +13,10 @@ def youtube(url, utype):
         'referer': 'https://www.youtube.com'
     }
     respons = requests.get(url=url, headers=headers)
+    # print(respons)
     json_str = re.findall('var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
-    # print(json_str)
     json_data = json.loads(json_str)
+    # print(json_data)
 
     video_url = json_data['streamingData']['adaptiveFormats'][0]['url']
     audio_url = json_data['streamingData']['adaptiveFormats'][-2]['url']
