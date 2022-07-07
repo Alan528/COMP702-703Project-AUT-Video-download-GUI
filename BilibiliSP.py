@@ -4,6 +4,7 @@ import re
 import json
 import os
 from tqdm import tqdm
+import pprint
 
 
 def bilibili(url, utype):
@@ -16,7 +17,7 @@ def bilibili(url, utype):
     # print(response.text) #get the web data
 
     title = re.findall('<h1 title="(.*?)"', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -37,8 +38,8 @@ def bilibili(url, utype):
     # print(audio_url)
     # print(video_url)
 
-    # audio_content = requests.get(url=audio_url, headers=headers, stream=True).content
-    # video_content = requests.get(url=video_url, headers=headers, stream=True).content
+    audio_content = requests.get(url=audio_url, headers=headers, stream=True).content
+    video_content = requests.get(url=video_url, headers=headers, stream=True).content
 
     if utype == "1":
 
