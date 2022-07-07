@@ -1,5 +1,6 @@
 import BilibiliSP
 import YoutubeSp
+import TiktokSp
 import re
 import CheckVideo
 
@@ -7,6 +8,7 @@ if __name__ == '__main__':
 
     bilibili_checkurl = "www.bilibili.com"
     youtube_checkurl = "www.youtube.com"
+    tiktok_checkurl = "www.douyin.com"
 
     while True:
         value = input("Please input you link: ")
@@ -17,5 +19,7 @@ if __name__ == '__main__':
             BilibiliSP.bilibili(value, userinput)
         elif re.findall(youtube_checkurl, value):
             YoutubeSp.youtube(value, userinput)
+        elif re.findall(tiktok_checkurl, value):
+            TiktokSp.douyin(value, userinput)
         else:
             print("Please input a Bilibili or Youtube link")

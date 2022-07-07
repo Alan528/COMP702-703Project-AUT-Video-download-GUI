@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8a1210cc-fac9-482b-9fe5-cdee0bbffcc2" name="Changes" comment="Bilibili Download">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YoutubeSp.py" beforeDir="false" afterPath="$PROJECT_DIR$/YoutubeSp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiktokSp.py" beforeDir="false" afterPath="$PROJECT_DIR$/TiktokSp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,10 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Backend test" />
+        <item itemvalue="Python.TiktokSp" />
         <item itemvalue="Python.you_g" />
         <item itemvalue="Python.YoutubeSp" />
         <item itemvalue="Python.BilibiliSP" />
-        <item itemvalue="Python.TiktokSp" />
       </list>
     </recent_temporary>
   </component>
