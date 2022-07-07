@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a1210cc-fac9-482b-9fe5-cdee0bbffcc2" name="Changes" comment="Bilibili Download">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BilibiliSP.py" beforeDir="false" afterPath="$PROJECT_DIR$/BilibiliSP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/YoutubeSp.py" beforeDir="false" afterPath="$PROJECT_DIR$/YoutubeSp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +123,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="download_bar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="you_g" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="b站视频爬虫" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,7 +135,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/download_bar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/you_g.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,19 +145,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.you_g" />
       <item itemvalue="Python.BilibiliSP" />
       <item itemvalue="Python.YoutubeSp" />
       <item itemvalue="Python.TiktokSp" />
-      <item itemvalue="Python.download_bar" />
       <item itemvalue="Python.Backend test" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Backend test" />
-        <item itemvalue="Python.BilibiliSP" />
+        <item itemvalue="Python.you_g" />
         <item itemvalue="Python.YoutubeSp" />
+        <item itemvalue="Python.BilibiliSP" />
         <item itemvalue="Python.TiktokSp" />
-        <item itemvalue="Python.download_bar" />
       </list>
     </recent_temporary>
   </component>
