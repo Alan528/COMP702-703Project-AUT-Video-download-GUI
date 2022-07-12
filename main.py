@@ -157,8 +157,8 @@ if __name__ == '__main__':
                     windown_download = download(self.top, inp)
 
                 except:
-                    window_load = invalue_input_bilibili_exist(self.top) # make a error window for tiktok
-                    
+                    window_load = invalue_input_douyin_exist(self.top) # make a error window for tiktok
+
             else:
                 windown_download = invalue_input(self.top)
 

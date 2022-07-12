@@ -1,6 +1,7 @@
 # Import the libraries file
 import BilibiliSP
 import YoutubeSp
+import DouyinSp
 from libraries import *
 from notification_screen import *
 
@@ -9,6 +10,7 @@ from notification_screen import *
 flag = 0
 bilibili_checkurl = "www.bilibili.com"
 youtube_checkurl = "www.youtube.com"
+douyin_checkurl = "www.douyin.com"
 
 
 class download(object):
@@ -135,8 +137,8 @@ class download(object):
                 BilibiliSP.bilibili(inp, str(flag))
             elif re.findall(youtube_checkurl, inp):
                 YoutubeSp.youtube(inp, str(flag))
-            else:
-                print("Please input a Bilibili or Youtube link")
+            elif re.findall(douyin_checkurl, inp):
+                DouyinSp.douyin(inp, str(flag))
 
             # make download bar running
             task = 10
@@ -168,8 +170,8 @@ class download(object):
             BilibiliSP.bilibili(inp, str(flag))
         elif re.findall(youtube_checkurl, inp):
             YoutubeSp.youtube(inp, str(flag))
-        else:
-            print("Please input a Bilibili or Youtube link")
+        elif re.findall(douyin_checkurl, inp):
+            DouyinSp.douyin(inp, str(flag))
 
         # make download bar running
         task = 10
@@ -203,8 +205,8 @@ class download(object):
             BilibiliSP.bilibili(inp, str(flag))
         elif re.findall(youtube_checkurl, inp):
             YoutubeSp.youtube(inp, str(flag))
-        else:
-            print("Please input a Bilibili or Youtube link")
+        elif re.findall(douyin_checkurl, inp):
+            DouyinSp.douyin(inp, str(flag))
 
         # make download bar running
         task = 10
