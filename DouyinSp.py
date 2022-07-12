@@ -3,6 +3,8 @@ import re
 import shutil
 import os
 from moviepy.editor import *
+import time
+
 
 def douyin(url, utype):
     headers = {
@@ -14,8 +16,8 @@ def douyin(url, utype):
     response = requests.get(url=url, headers=headers)
     # print(response.text)
 
-    title = re.findall('<title data-react-helmet="true">(.*?)</title>', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\']
+    title = re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -36,15 +38,22 @@ def douyin(url, utype):
     elif utype == "2":
         with open(title + '.mp4', mode='wb') as f:
             f.write(video_content)
-        cmd = f' ffmpeg -i {title}.mp4 {title}Tiktok.mp4'
+
+        video = VideoFileClip(f"{title}.mp4")
+        video = video.without_audio()
+        video.write_videofile(f"No_sound{title}.mp4")
+        shutil.move(f'.\\No_sound{title}.mp4', '.\\Download')
+        cmd = "taskkill /f /t /im ffmpeg-win64-v4.2.2.exe"
         os.system(cmd)
+        time.sleep(1)
+        os.remove(title + '.mp4')
 
-        shutil.move(f'.\\{title}.mp4', '.\\Download')
-
-    elif utype =="3":
-        with open(title + '.mp3', mode='wb') as f:
+    elif utype == "3":
+        with open(title + '.mp4', mode='wb') as f:
             f.write(video_content)
-
+        audio = AudioFileClip(f"{title}.mp4")
+        audio.write_audiofile(f"{title}.mp3")
         shutil.move(f'.\\{title}.mp3', '.\\Download')
+        os.remove(title + '.mp4')
 
     print("Complete Download")

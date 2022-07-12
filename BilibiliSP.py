@@ -4,6 +4,7 @@ import re
 import json
 import os
 from tqdm import tqdm
+from moviepy.editor import *
 
 
 def bilibili(url, utype):
@@ -16,7 +17,7 @@ def bilibili(url, utype):
     # print(response.text) #get the web data
 
     title = re.findall('<h1 title="(.*?)"', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')

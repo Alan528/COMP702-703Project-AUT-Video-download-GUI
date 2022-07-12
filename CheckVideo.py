@@ -38,13 +38,6 @@ def checkdouyin(url):
     response = requests.get(url=url, headers=headers)
     # print(response.text)
 
-    title = re.findall('<title data-react-helmet="true">(.*?)</title>', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\']
-    for i in s:
-        title = title.replace(i, '')
-    print(f'Video Title："{title}"')
-
     # print(response.text)
     video_url = re.findall('src(.*?)src%22%3A%', response.text)[0]
     video_url = requests.utils.unquote(video_url).replace('":"', 'http:')
-

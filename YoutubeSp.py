@@ -25,7 +25,7 @@ def youtube(url, utype):
     # print(video_url)
     # print(audio_url)
 
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')

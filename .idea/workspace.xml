@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8a1210cc-fac9-482b-9fe5-cdee0bbffcc2" name="Changes" comment="Bilibili Download">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/download_bar.py" beforeDir="false" afterPath="$PROJECT_DIR$/download_bar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/notification_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BilibiliSP.py" beforeDir="false" afterPath="$PROJECT_DIR$/BilibiliSP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckVideo.py" beforeDir="false" afterPath="$PROJECT_DIR$/CheckVideo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DouyinSp.py" beforeDir="false" afterPath="$PROJECT_DIR$/DouyinSp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoutubeSp.py" beforeDir="false" afterPath="$PROJECT_DIR$/YoutubeSp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TiktokSp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckVideo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="b站视频爬虫" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -73,7 +74,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TiktokSp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CheckVideo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,7 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Yinghua" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="DouyinSp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="b站视频爬虫" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,7 +95,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Yinghua.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DouyinSp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,19 +147,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.CheckVideo" />
+      <item itemvalue="Python.DouyinSp" />
       <item itemvalue="Python.ph" />
-      <item itemvalue="Python.Yinghua" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.TiktokSp" />
       <item itemvalue="Python.Backend test" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.CheckVideo" />
+        <item itemvalue="Python.DouyinSp" />
         <item itemvalue="Python.Backend test" />
         <item itemvalue="Python.ph" />
-        <item itemvalue="Python.TiktokSp" />
-        <item itemvalue="Python.Yinghua" />
       </list>
     </recent_temporary>
   </component>
