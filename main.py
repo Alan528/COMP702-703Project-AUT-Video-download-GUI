@@ -1,13 +1,10 @@
 import BilibiliSP
 import YoutubeSp
-import re
-import tkinter as tk
+import CheckVideo
 from libraries import *
 from notification_screen import *
 from download_bar import *
-from importlib.resources import path
-from tkinter import *
-import CheckVideo
+
 
 
 if __name__ == '__main__':
@@ -100,16 +97,16 @@ if __name__ == '__main__':
                 width=171,
                 height=65)
 
-            # 3rd platform button
-            self.third_img = PhotoImage(file=f"./image/btt_youtube.png")
-            self.third_btt = Button(
-                image=self.third_img,
+            # Douyin platform button
+            self.douyin_img = PhotoImage(file=f"./image/btt_douyin.png")
+            self.douyin_btt = Button(
+                image=self.douyin_img,
                 borderwidth=0,
                 highlightthickness=0,
-                command=self.btn_3rd_clicked,
+                command=self.btn_douyin_clicked,
                 relief="flat")
 
-            self.third_btt.place(
+            self.douyin_btt.place(
                 x=613, y=441,
                 width=171,
                 height=65)
@@ -132,12 +129,14 @@ if __name__ == '__main__':
 
             bilibili_checkurl = "www.bilibili.com"
             youtube_checkurl = "www.youtube.com"
+            douuyin_checkurl = "www.douyin.com"
+
             self.top = Toplevel()
             inp = self.textbox.get()
             if re.findall(bilibili_checkurl, inp):
                 try:
                     CheckVideo.checkbilibili(inp)
-                    windown_download = download(self.top)
+                    windown_download = download(self.top, inp)
 
                 except:
                     window_load = invalue_input_bilibili_exist(self.top)
@@ -146,11 +145,20 @@ if __name__ == '__main__':
 
                 try:
                     CheckVideo.checkyoutube(inp)
-                    windown_download = download(self.top)
+                    windown_download = download(self.top, inp)
                 except:
                     window_load = invalue_input_youtube_exist(self.top)
 
                 print("Button download Clicked\n\n")
+
+            elif re.findall(douuyin_checkurl,inp):
+                try:
+                    CheckVideo.checkdouyin(inp)
+                    windown_download = download(self.top, inp)
+
+                except:
+                    window_load = invalue_input_bilibili_exist(self.top) # make a error window for tiktok
+                    
             else:
                 windown_download = invalue_input(self.top)
 
@@ -158,18 +166,13 @@ if __name__ == '__main__':
         def btn_youtube_clicked(self):
             webbrowser.open('https://www.youtube.com/')
 
-        # Open youtube website when user clicked
+        # Open bilibili website when user clicked
         def btn_bilibili_clicked(self):
             webbrowser.open('https://www.bilibili.com/')
 
-        # Open youtube website when user clicked
-        def btn_3rd_clicked(self):
-            # webbrowser.open('https://www.bilibili.com/')
-            self.top = Toplevel()
-            inp = self.textbox.get()
-            print("value input in textbox:" + inp + "\n")
-            windown_download = invalue_input(self.top)
-            print("Button for 3rd platform Clicked\n\n")
+        # Open douyin website when user clicked
+        def btn_douyin_clicked(self):
+            webbrowser.open('https://www.douyin.com/')
 
     root = Tk()
     root.resizable(False, False)

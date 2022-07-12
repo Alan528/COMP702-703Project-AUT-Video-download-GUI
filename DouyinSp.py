@@ -1,6 +1,8 @@
 import requests
 import re
-
+import shutil
+import os
+from moviepy.editor import *
 
 def douyin(url, utype):
     headers = {
@@ -29,9 +31,20 @@ def douyin(url, utype):
         with open(title + '.mp4', mode='wb') as f:
             f.write(video_content)
 
-    if utype =="3":
+        shutil.move(f'.\\{title}.mp4', '.\\Download')
+
+    elif utype == "2":
+        with open(title + '.mp4', mode='wb') as f:
+            f.write(video_content)
+        cmd = f' ffmpeg -i {title}.mp4 {title}Tiktok.mp4'
+        os.system(cmd)
+
+        shutil.move(f'.\\{title}.mp4', '.\\Download')
+
+    elif utype =="3":
         with open(title + '.mp3', mode='wb') as f:
             f.write(video_content)
 
+        shutil.move(f'.\\{title}.mp3', '.\\Download')
 
     print("Complete Download")
