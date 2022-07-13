@@ -30,7 +30,7 @@ def youtube(url, utype):
 
 
     title = json_data['videoDetails']['title']
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')

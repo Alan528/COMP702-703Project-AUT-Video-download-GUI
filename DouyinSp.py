@@ -18,7 +18,7 @@ def douyin(url, utype):
     # print(response.text)
 
     title = re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')

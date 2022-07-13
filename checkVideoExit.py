@@ -12,7 +12,7 @@ def bilibilivideo(url):
     response = requests.get(url=url, headers=headers)
     # print(response.text) #get the web data
     title = re.findall('<h1 title="(.*?)"', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -33,7 +33,7 @@ def bilibilinosvideo(url):
     response = requests.get(url=url, headers=headers)
     # print(response.text) #get the web data
     title = re.findall('<h1 title="(.*?)"', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -54,7 +54,7 @@ def bilibiliaudio(url):
     response = requests.get(url=url, headers=headers)
     # print(response.text) #get the web data
     title = re.findall('<h1 title="(.*?)"', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -80,7 +80,7 @@ def youtube(url):
     json_data = json.loads(json_str)
 
     title = json_data['videoDetails']['title']
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -104,7 +104,7 @@ def youtubenosvideo(url):
     json_data = json.loads(json_str)
 
     title = json_data['videoDetails']['title']
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -130,7 +130,7 @@ def youtubeaudio(url):
     json_data = json.loads(json_str)
 
     title = json_data['videoDetails']['title']
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -154,7 +154,7 @@ def douyin(url):
     response = requests.get(url=url, headers=headers)
     # print(response.text)
     title = re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -175,7 +175,7 @@ def douyinnosvideo(url):
     response = requests.get(url=url, headers=headers)
     # print(response.text)
     title = re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -197,7 +197,7 @@ def douyinaudio(url):
     response = requests.get(url=url, headers=headers)
     # print(response.text)
     title = re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')

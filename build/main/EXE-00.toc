@@ -2,7 +2,7 @@
  True,
  False,
  False,
- 'D:\\COMP702-703Project\\venv\\lib\\site-packages\\PyInstaller\\bootloader\\images\\icon-console.ico',
+ 'D:\\COMP702-703Project\\main.ico',
  None,
  False,
  False,
@@ -3063,7 +3063,7 @@
  [],
  False,
  False,
- 1657720074,
+ 1657724698,
  [('run.exe',
    'D:\\COMP702-703Project\\venv\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\run.exe',
    'EXECUTABLE')])

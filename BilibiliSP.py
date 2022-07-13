@@ -18,7 +18,7 @@ def bilibili(url, utype):
     # print(response.text) #get the web data
 
     title = re.findall('<h1 title="(.*?)"', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -93,7 +93,7 @@ def bilibili(url, utype):
         video_size = int(video.headers.get('Content-Length'))
         video_pbar = tqdm(total=video_size)
 
-        with open("bilibili_NoS"+title + '.mp4', mode='wb') as f:
+        with open("bilibili_NoS" + title + '.mp4', mode='wb') as f:
             for video_chunk in video.iter_content(1024 * 1024 * 2):
                 f.write(video_chunk)
                 video_pbar.set_description('Downloading video...')
@@ -122,4 +122,5 @@ def bilibili(url, utype):
         os.system(cmd1)
         # move the video into Download folder
         shutil.move(f'.\\bilibili_{title}.mp3', '.\\Download\\Audio')
-        os.remove(title+".mp3")
+        os.remove(title + ".mp3")
+        print("Completed Download")
