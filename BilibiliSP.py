@@ -5,7 +5,7 @@ import re
 import json
 import os
 from tqdm import tqdm
-# from moviepy.editor import VideoFileClip
+from moviepy.editor import VideoFileClip
 
 
 def bilibili(url, utype):

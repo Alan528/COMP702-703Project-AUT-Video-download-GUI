@@ -6,7 +6,7 @@ from tqdm import tqdm
 import requests
 import re
 import os
-from moviepy.editor import VideoFileClip, AudioFileClip
+# from moviepy.editor import VideoFileClip, AudioFileClip
 
 
 def youtube(url, utype):
