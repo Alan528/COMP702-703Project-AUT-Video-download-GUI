@@ -4,8 +4,7 @@ import CheckVideo
 from libraries import *
 from notification_screen import *
 from download_bar import *
-
-
+import checkVideoExit
 
 if __name__ == '__main__':
     class Application(Frame, object):
@@ -137,27 +136,22 @@ if __name__ == '__main__':
                 try:
                     CheckVideo.checkbilibili(inp)
                     windown_download = download(self.top, inp)
-
                 except:
                     window_load = invalue_input_bilibili_exist(self.top)
 
             elif re.findall(youtube_checkurl, inp):
-
                 try:
                     CheckVideo.checkyoutube(inp)
                     windown_download = download(self.top, inp)
                 except:
                     window_load = invalue_input_youtube_exist(self.top)
 
-                print("Button download Clicked\n\n")
-
-            elif re.findall(douuyin_checkurl,inp):
+            elif re.findall(douuyin_checkurl, inp):
                 try:
                     CheckVideo.checkdouyin(inp)
                     windown_download = download(self.top, inp)
-
                 except:
-                    window_load = invalue_input_douyin_exist(self.top) # make a error window for tiktok
+                    window_load = invalue_input_douyin_exist(self.top)
 
             else:
                 windown_download = invalue_input(self.top)
@@ -173,6 +167,7 @@ if __name__ == '__main__':
         # Open douyin website when user clicked
         def btn_douyin_clicked(self):
             webbrowser.open('https://www.douyin.com/')
+
 
     root = Tk()
     root.resizable(False, False)

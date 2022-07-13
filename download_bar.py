@@ -4,6 +4,7 @@ import YoutubeSp
 import DouyinSp
 from libraries import *
 from notification_screen import *
+import checkVideoExit
 
 # purpose of this global variable is let the system know which button has been clicked
 # and called exactly that function for downloading
@@ -134,20 +135,33 @@ class download(object):
             print("============")
 
             if re.findall(bilibili_checkurl, inp):
-                BilibiliSP.bilibili(inp, str(flag))
+                if not checkVideoExit.bilibilivideo(inp):
+                    BilibiliSP.bilibili(inp, str(flag))
+                else:
+                   print("The file exit") # call out file exit window
+
             elif re.findall(youtube_checkurl, inp):
-                YoutubeSp.youtube(inp, str(flag))
+                if not checkVideoExit.youtube(inp):
+                    YoutubeSp.youtube(inp, str(flag))
+                else:
+                    print("The file exit")  # call out file exit window
+
+
             elif re.findall(douyin_checkurl, inp):
-                DouyinSp.douyin(inp, str(flag))
+                if not checkVideoExit.douyin(inp):
+                    DouyinSp.douyin(inp, str(flag))
+                else:
+                    print("The file exit")  # call out file exit window
+
 
             # make download bar running
             task = 10
             x = 0
-            while (x < task):
-                tm.sleep(1)
-                self.bar['value'] += 10
-                x += 1
-                self.master.update_idletasks()
+            # while (x < task):
+            #     tm.sleep(1)
+            #     self.bar['value'] += 10
+            #     x += 1
+            #     self.master.update_idletasks()
 
         # this code for displaying a downloaded notification
             self.top = Toplevel()
@@ -167,20 +181,31 @@ class download(object):
         print("value button:", flag, "\n\n")
 
         if re.findall(bilibili_checkurl, inp):
-            BilibiliSP.bilibili(inp, str(flag))
+            if not checkVideoExit.bilibilinosvideo(inp):
+                BilibiliSP.bilibili(inp, str(flag))
+            else:
+                print("The file exit")  # call out file exit window
+
         elif re.findall(youtube_checkurl, inp):
-            YoutubeSp.youtube(inp, str(flag))
+            if not checkVideoExit.youtubenosvideo(inp):
+                YoutubeSp.youtube(inp, str(flag))
+            else:
+                print("The file exit")  # call out file exit window
+
         elif re.findall(douyin_checkurl, inp):
-            DouyinSp.douyin(inp, str(flag))
+            if not checkVideoExit.douyinnosvideo(inp):
+                DouyinSp.douyin(inp, str(flag))
+            else:
+                print("The file exit")  # call out file exit window
 
         # make download bar running
         task = 10
         x = 0
-        while (x < task):
-            tm.sleep(1)
-            self.bar['value'] += 10
-            x += 1
-            self.master.update_idletasks()
+        # while (x < task):
+        #     tm.sleep(1)
+        #     self.bar['value'] += 10
+        #     x += 1
+        #     self.master.update_idletasks()
 
         # this code for displaying a downloaded notification
         self.top = Toplevel()
@@ -202,20 +227,31 @@ class download(object):
         print("value button:", flag, "\n\n")
 
         if re.findall(bilibili_checkurl, inp):
-            BilibiliSP.bilibili(inp, str(flag))
+            if not checkVideoExit.bilibiliaudio(inp):
+                BilibiliSP.bilibili(inp, str(flag))
+            else:
+                print("The file exit")  # call out file exit window
+
         elif re.findall(youtube_checkurl, inp):
-            YoutubeSp.youtube(inp, str(flag))
+            if not checkVideoExit.youtubeaudio(inp):
+                YoutubeSp.youtube(inp, str(flag))
+            else:
+                print("The file exit")  # call out file exit window
+
         elif re.findall(douyin_checkurl, inp):
-            DouyinSp.douyin(inp, str(flag))
+            if not checkVideoExit.douyinaudio(inp):
+                DouyinSp.douyin(inp, str(flag))
+            else:
+                print("The file exit")  # call out file exit window
 
         # make download bar running
         task = 10
         x = 0
-        while (x < task):
-            tm.sleep(1)
-            self.bar['value'] += 10
-            x += 1
-            self.master.update_idletasks()
+        # while (x < task):
+        #     tm.sleep(1)
+        #     self.bar['value'] += 10
+        #     x += 1
+        #     self.master.update_idletasks()
 
         # this code for displaying a downloaded notification
         self.top = Toplevel()
