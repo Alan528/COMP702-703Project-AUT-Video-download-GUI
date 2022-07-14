@@ -6,6 +6,8 @@ from tqdm import tqdm
 import requests
 import re
 import os
+
+
 # from moviepy.editor import VideoFileClip, AudioFileClip
 
 
@@ -25,9 +27,6 @@ def youtube(url, utype):
 
     # print(video_url)
     # print(audio_url)
-
-
-
 
     title = json_data['videoDetails']['title']
     s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
@@ -64,34 +63,36 @@ def youtube(url, utype):
                 audio_pbar.update(1024 * 1024 * 2)
             audio_pbar.set_description('Completed download audio')
             audio_pbar.close()
+        try:
+            cmd1 = f"ffmpeg -i {title}.mp3 -f mp3 comp{title}.mp3"
+            os.system(cmd1)
+            time.sleep(1)
 
-        cmd1 = f"ffmpeg -i {title}.mp3 -f mp3 comp{title}.mp3"
-        os.system(cmd1)
-        time.sleep(1)
+            cmd2 = f' ffmpeg  -i {title}.mp4 -i comp{title}.mp3 -acodec copy -vcodec copy youtube_{title}.mp4'
+            # use cmd run ffmpeg join video and video
+            os.system(cmd2)
+            time.sleep(1)
 
-        cmd2 = f' ffmpeg  -i {title}.mp4 -i comp{title}.mp3 -acodec copy -vcodec copy youtube_{title}.mp4'
-        # use cmd run ffmpeg join video and video
-        os.system(cmd2)
-        time.sleep(1)
+            # clip = VideoFileClip(f"youtube{title}.mp4")
+            # newclip = clip.volumex(1)
+            # newclip.write_videofile(f"youtube_{title}.mp4")
 
-        # clip = VideoFileClip(f"youtube{title}.mp4")
-        # newclip = clip.volumex(1)
-        # newclip.write_videofile(f"youtube_{title}.mp4")
+            # move the video into Download folder
+            shutil.move(f'.\\youtube_{title}.mp4', '.\\Download\\Video')
+            time.sleep(1)
 
+            # delete the video amd audio that not join
+            os.remove(title + '.mp4')
+            time.sleep(1)
+            os.remove(title + '.mp3')
+            time.sleep(1)
+            os.remove("comp" + title + ".mp3")
+            time.sleep(1)
 
-        # move the video into Download folder
-        shutil.move(f'.\\youtube_{title}.mp4', '.\\Download\\Video')
-        time.sleep(1)
-
-        # delete the video amd audio that not join
-        os.remove(title + '.mp4')
-        time.sleep(1)
-        os.remove(title + '.mp3')
-        time.sleep(1)
-        os.remove("comp"+title+".mp3")
-        time.sleep(1)
-
-        print('Download completed')
+            print('Download completed')
+        except:
+            os.remove(title + '.mp4')
+            os.remove(title + '.mp3')
 
     elif utype == "2":
 
@@ -99,7 +100,7 @@ def youtube(url, utype):
         video_size = int(video.headers.get('Content-Length'))
         video_pbar = tqdm(total=video_size)
 
-        with open("youtube_NoS"+title + '.mp4', mode='wb') as f:
+        with open("youtube_NoS" + title + '.mp4', mode='wb') as f:
             for video_chunk in video.iter_content(1024 * 1024 * 2):
                 f.write(video_chunk)
                 video_pbar.set_description('Downloading video...')
@@ -125,10 +126,13 @@ def youtube(url, utype):
             audio_pbar.set_description('Completed download audio')
             audio_pbar.close()
 
-        cmd = f"ffmpeg -i {title}.mp3 -f mp3 youtube_{title}.mp3"
-        os.system(cmd)
+        try:
+            cmd = f"ffmpeg -i {title}.mp3 -f mp3 youtube_{title}.mp3"
+            os.system(cmd)
 
-        # move the video into Download folder
-        shutil.move(f'.\\youtube_{title}.mp3', '.\\Download\\Audio')
-        time.sleep(1)
-        os.remove(title + '.mp3')
+            # move the video into Download folder
+            shutil.move(f'.\\youtube_{title}.mp3', '.\\Download\\Audio')
+            time.sleep(1)
+            os.remove(title + '.mp3')
+        except:
+            os.remove(title + '.mp3')

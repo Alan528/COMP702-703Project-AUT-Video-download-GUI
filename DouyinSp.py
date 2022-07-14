@@ -81,10 +81,12 @@ def douyin(url, utype):
                 video_pbar.update(1024 * 1024 * 2)
             video_pbar.set_description('Completed download video')
             video_pbar.close()
+        try:
 
-        cmd1 = f"ffmpeg -i {title}.mp4 -f mp3 douyin_{title}.mp3"
-        os.system(cmd1)
-        shutil.move(f'.\\douyin_{title}.mp3', '.\\Download\\Audio')
-        os.remove(title + '.mp4')
-
-    print("Complete Download")
+            cmd1 = f"ffmpeg -i {title}.mp4 -f mp3 douyin_{title}.mp3"
+            os.system(cmd1)
+            shutil.move(f'.\\douyin_{title}.mp3', '.\\Download\\Audio')
+            os.remove(title + '.mp4')
+            print("Complete Download")
+        except:
+            os.remove(title + '.mp4')

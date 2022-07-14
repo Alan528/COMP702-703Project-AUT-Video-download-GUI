@@ -68,24 +68,28 @@ def bilibili(url, utype):
             audio_pbar.set_description('Completed download audio')
             audio_pbar.close()
 
-        cmd1 = f"ffmpeg -i {title}.mp3 -f mp3 comp{title}.mp3"
-        os.system(cmd1)
+        try:
+            cmd1 = f"ffmpeg -i {title}.mp3 -f mp3 comp{title}.mp3"
+            os.system(cmd1)
 
-        cmd2 = f' ffmpeg  -i {title}.mp4 -i comp{title}.mp3 -acodec copy -vcodec copy bilibili_{title}.mp4'
-        os.system(cmd2)
-        time.sleep(1)
-        # clip = VideoFileClip(f"bilibili{title}.mp4")
-        # newclip = clip.volumex(1)
-        # newclip.write_videofile(f"bilibili_{title}.mp4")
-        shutil.move(f'.\\bilibili_{title}.mp4', '.\\Download\\Video')
-        time.sleep(1)
+            cmd2 = f' ffmpeg  -i {title}.mp4 -i comp{title}.mp3 -acodec copy -vcodec copy bilibili_{title}.mp4'
+            os.system(cmd2)
+            time.sleep(1)
+            # clip = VideoFileClip(f"bilibili{title}.mp4")
+            # newclip = clip.volumex(1)
+            # newclip.write_videofile(f"bilibili_{title}.mp4")
+            shutil.move(f'.\\bilibili_{title}.mp4', '.\\Download\\Video')
+            time.sleep(1)
 
-        # delete the video amd audio that not join
-        os.remove(title + '.mp4')
-        os.remove(title + '.mp3')
-        os.remove("comp" + title + ".mp3")
+            # delete the video amd audio that not join
+            os.remove(title + '.mp4')
+            os.remove(title + '.mp3')
+            os.remove("comp" + title + ".mp3")
 
-        print('Download completed')
+            print('Download completed')
+        except:
+            os.remove(title + '.mp4')
+            os.remove(title + '.mp3')
 
     elif utype == "2":
 
@@ -118,9 +122,12 @@ def bilibili(url, utype):
             audio_pbar.set_description('Completed download audio')
             audio_pbar.close()
 
-        cmd1 = f"ffmpeg -i {title}.mp3 -f mp3 bilibili_{title}.mp3"
-        os.system(cmd1)
-        # move the video into Download folder
-        shutil.move(f'.\\bilibili_{title}.mp3', '.\\Download\\Audio')
-        os.remove(title + ".mp3")
-        print("Completed Download")
+        try:
+            cmd1 = f"ffmpeg -i {title}.mp3 -f mp3 bilibili_{title}.mp3"
+            os.system(cmd1)
+            # move the video into Download folder
+            shutil.move(f'.\\bilibili_{title}.mp3', '.\\Download\\Audio')
+            os.remove(title + ".mp3")
+            print("Completed Download")
+        except:
+            os.remove(title + '.mp3')
