@@ -1,6 +1,1 @@
-for /F %%i in ('DIR bin /S /B') do ( set file=%%i)
-
-echo file=%file%
-
-setx PATH "%file%"
-
+setx PATH "%PATH%;C:\ffmpeg-master-latest-win64-gpl-shared"

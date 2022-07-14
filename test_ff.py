@@ -1,5 +1,6 @@
 import os
 import re
+import shutil
 import time
 import sys
 
@@ -25,8 +26,8 @@ def test_ff():
         print("ffmpeg exit")
     else:
         print("ffmpeg not exit, Installing")
-
+        shutil.move(f'.\\ffmpeg-master-latest-win64-gpl-shared', 'C:')
         os.system("env.bat")
         print("please restart the program")
-        time.sleep(2)
+        time.sleep(3)
         exit()
