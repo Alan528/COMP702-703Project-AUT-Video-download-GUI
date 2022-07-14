@@ -24,10 +24,7 @@ def test_ff():
     if re.findall(join_part, path):
         print("ffmpeg exit")
     else:
-        print("ffmpeg not exit, Installing that will restart the program")
-        cmd = 'setx path " " '
-        os.system(cmd)
+        print("ffmpeg not exit, Installing please restart the program")
         os.system("env.bat")
-
-if __name__ == '__main__':
-    test_ff()
+        time.sleep(2)
+        exit()
