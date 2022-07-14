@@ -25,6 +25,9 @@ def test_ff():
         print("ffmpeg exit")
     else:
         print("ffmpeg not exit, Installing that will restart the program")
-        os.system("Install.bat")
-        time.sleep(3)
-        exit()
+        cmd = 'setx path " " '
+        os.system(cmd)
+        os.system("env.bat")
+
+if __name__ == '__main__':
+    test_ff()
