@@ -5,6 +5,7 @@ from libraries import *
 from notification_screen import *
 from download_bar import *
 import checkVideoExit
+import test_ff
 
 if __name__ == '__main__':
     class Application(Frame, object):
@@ -168,7 +169,7 @@ if __name__ == '__main__':
         def btn_douyin_clicked(self):
             webbrowser.open('https://www.douyin.com/')
 
-
+    test_ff.test_ff()
     root = Tk()
     root.resizable(False, False)
     app = Application(root)
