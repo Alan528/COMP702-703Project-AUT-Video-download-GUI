@@ -26,8 +26,11 @@ def test_ff():
         print("ffmpeg exit")
     else:
         print("ffmpeg not exit, Installing")
-        shutil.move(f'.\\ffmpeg-master-latest-win64-gpl-shared', 'C:\\')
+        shutil.move(".\\ffmpeg-master-latest-win64-gpl-shared", "C:")
         os.system("env.bat")
         print("please restart the program")
         time.sleep(3)
         exit()
+
+if __name__ == '__main__':
+    test_ff()
