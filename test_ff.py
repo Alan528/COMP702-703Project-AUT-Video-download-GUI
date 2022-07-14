@@ -10,19 +10,11 @@ def test_ff():
     path = str(os.environ['path'])
     for i in s:
         path = path.replace(i, '/')
-        # print(path)
-
-    current_Path = os.getcwd()
-    for i in s:
-        current_Path = current_Path.replace(i, '/')
-        # print(current_Path)
+        print(path)
 
     ffe_part = "C:/ffmpeg-master-latest-win64-gpl-shared/bin"
 
-    join_part = current_Path + ffe_part
-    # print(join_part)
-
-    if re.findall(join_part, path):
+    if re.findall(ffe_part, path):
         print("ffmpeg exit")
     else:
         print("ffmpeg not exit, Installing")
@@ -31,3 +23,4 @@ def test_ff():
         print("please restart the program")
         time.sleep(3)
         exit()
+
