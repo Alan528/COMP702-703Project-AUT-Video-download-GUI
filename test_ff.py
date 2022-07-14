@@ -17,7 +17,7 @@ def test_ff():
         current_Path = current_Path.replace(i, '/')
         # print(current_Path)
 
-    ffe_part = "/ffmpeg-master-latest-win64-gpl-shared/bin"
+    ffe_part = "C:/ffmpeg-master-latest-win64-gpl-shared/bin"
 
     join_part = current_Path + ffe_part
     # print(join_part)
@@ -31,6 +31,3 @@ def test_ff():
         print("please restart the program")
         time.sleep(3)
         exit()
-
-if __name__ == '__main__':
-    test_ff()
