@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0203eae5-7b05-4a81-b8d4-b79b87735cf1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AUT_Video_Download.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/AUT_Video_Download.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_ff.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ff.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
