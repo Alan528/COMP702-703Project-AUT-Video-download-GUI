@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0203eae5-7b05-4a81-b8d4-b79b87735cf1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AUT_Video_Download.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AUT_Video_Download.spec" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_ff.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ff.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +39,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.test_ff">
+  <component name="RunManager" selected="Python.main">
     <configuration name="Backend test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="COMP702-703Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,8 +168,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_ff" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.test_ff" />
         <item itemvalue="Python.Backend test" />
         <item itemvalue="Python.test_ffmpeg" />
         <item itemvalue="Python.test" />
