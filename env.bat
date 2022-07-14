@@ -4,4 +4,3 @@ echo file=%file%
 
 setx PATH "%file%"
 
-@REM setx PATH "%PATH%;%file%"

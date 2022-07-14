@@ -24,7 +24,9 @@ def test_ff():
     if re.findall(join_part, path):
         print("ffmpeg exit")
     else:
-        print("ffmpeg not exit, Installing please restart the program")
+        print("ffmpeg not exit, Installing")
+
         os.system("env.bat")
+        print("please restart the program")
         time.sleep(2)
         exit()
