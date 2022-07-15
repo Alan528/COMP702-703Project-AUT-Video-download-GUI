@@ -20,6 +20,7 @@ def test_ff():
         print("please restart the program")
         time.sleep(5)
         sys.exit()
+        os.system("restartmes.cmd")
     elif not os.path.exists("C:\\ffmpeg-master-latest-win64-gpl-shared\\bin") and re.findall(ffe_path, path):
         print("ffmpeg file not exit, Installing")
         cmd = "xcopy /S /H /Y ffmpeg-master-latest-win64-gpl-shared c:\\ffmpeg-master-latest-win64-gpl-shared\\"
@@ -27,12 +28,14 @@ def test_ff():
         print("please restart the program")
         time.sleep(5)
         sys.exit()
+        os.system("restartmes.cmd")
     elif not re.findall(ffe_path, path) and os.path.exists("C:\\ffmpeg-master-latest-win64-gpl-shared\\bin"):
         print("ffmpeg environment not exit, Installing")
         os.system("admin.cmd")
         print("please restart the program")
         time.sleep(5)
         sys.exit()
+        os.system("restartmes.cmd")
     else:
         print("ffmpeg exit")
 
