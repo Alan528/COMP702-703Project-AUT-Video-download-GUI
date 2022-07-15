@@ -2,7 +2,6 @@ import os
 import re
 import shutil
 import time
-import sys
 
 
 def test_ff():
@@ -17,7 +16,7 @@ def test_ff():
         print("ffmpeg not exit, Installing")
         cmd = "xcopy /S /H /Y ffmpeg-master-latest-win64-gpl-shared c:\\ffmpeg-master-latest-win64-gpl-shared\\"
         os.system(cmd)
-        os.system("env.bat")
+        os.system("admin.cmd")
         print("please restart the program")
         time.sleep(5)
         exit()
@@ -30,7 +29,7 @@ def test_ff():
         exit()
     elif not re.findall(ffe_path, path) and os.path.exists("C:\\ffmpeg-master-latest-win64-gpl-shared\\bin"):
         print("ffmpeg environment not exit, Installing")
-        os.system("env.bat")
+        os.system("admin.cmd")
         print("please restart the program")
         time.sleep(5)
         exit()
@@ -38,5 +37,3 @@ def test_ff():
         print("ffmpeg exit")
 
 
-if __name__ == '__main__':
-    test_ff()
