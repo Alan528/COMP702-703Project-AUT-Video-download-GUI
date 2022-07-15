@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0203eae5-7b05-4a81-b8d4-b79b87735cf1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AUT_Download_GUI.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/AUT_Download_GUI.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/AUT_Download_GUI.pkg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/Analysis-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/EXE-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/PKG-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/PYZ-00.pyz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/PYZ-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/warn-AUT_Download_GUI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/warn-AUT_Download_GUI.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/xref-AUT_Download_GUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/xref-AUT_Download_GUI.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_ff.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AUT_Download_GUI.spec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/download_bar.py" beforeDir="false" afterPath="$PROJECT_DIR$/download_bar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
