@@ -2,6 +2,221 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0203eae5-7b05-4a81-b8d4-b79b87735cf1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/bin/avcodec-59.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/bin/avdevice-59.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/bin/avfilter-8.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/bin/avformat-59.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/bin/avutil-57.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/bin/ffmpeg.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/bin/ffplay.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/bin/ffprobe.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/bin/postproc-56.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/bin/swresample-4.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/bin/swscale-6.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/developer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/faq.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/fate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffmpeg-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffmpeg-bitstream-filters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffmpeg-codecs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffmpeg-devices.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffmpeg-filters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffmpeg-formats.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffmpeg-protocols.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffmpeg-resampler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffmpeg-scaler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffmpeg-utils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffmpeg.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffplay-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffplay.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffprobe-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/ffprobe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/general.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/git-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/libavcodec.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/libavdevice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/libavfilter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/libavformat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/libavutil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/libswresample.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/libswscale.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/mailing-list-faq.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/nut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/platform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/doc/style.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/ac3_parser.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/adts_parser.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/avcodec.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/avdct.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/avfft.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/bsf.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/codec.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/codec_desc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/codec_id.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/codec_par.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/d3d11va.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/defs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/dirac.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/dv_profile.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/dxva2.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/jni.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/mediacodec.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/packet.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/qsv.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/vdpau.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/version_major.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/videotoolbox.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/vorbis_parser.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavcodec/xvmc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavdevice/avdevice.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavdevice/version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavdevice/version_major.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavfilter/avfilter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavfilter/buffersink.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavfilter/buffersrc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavfilter/version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavfilter/version_major.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavformat/avformat.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavformat/avio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavformat/version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavformat/version_major.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/adler32.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/aes.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/aes_ctr.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/attributes.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/audio_fifo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/avassert.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/avconfig.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/avstring.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/avutil.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/base64.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/blowfish.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/bprint.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/bswap.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/buffer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/camellia.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/cast5.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/channel_layout.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/common.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/cpu.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/crc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/csp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/des.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/detection_bbox.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/dict.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/display.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/dovi_meta.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/downmix_info.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/encryption_info.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/error.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/eval.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/ffversion.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/fifo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/file.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/film_grain_params.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/frame.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hash.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hdr_dynamic_metadata.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hdr_dynamic_vivid_metadata.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hmac.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext_cuda.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext_d3d11va.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext_drm.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext_dxva2.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext_mediacodec.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext_opencl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext_qsv.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext_vaapi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext_vdpau.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext_videotoolbox.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/hwcontext_vulkan.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/imgutils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/intfloat.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/intreadwrite.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/lfg.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/log.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/lzo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/macros.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/mastering_display_metadata.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/mathematics.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/md5.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/mem.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/motion_vector.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/murmur3.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/opt.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/parseutils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/pixdesc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/pixelutils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/pixfmt.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/random_seed.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/rational.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/rc4.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/replaygain.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/ripemd.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/samplefmt.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/sha.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/sha512.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/spherical.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/stereo3d.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/tea.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/threadmessage.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/time.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/timecode.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/timestamp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/tree.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/twofish.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/tx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/uuid.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/video_enc_params.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libavutil/xtea.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libpostproc/postprocess.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libpostproc/version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libpostproc/version_major.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libswresample/swresample.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libswresample/version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libswresample/version_major.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libswscale/swscale.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libswscale/version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/include/libswscale/version_major.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/avcodec-59.def" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/avcodec.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/avdevice-59.def" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/avdevice.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/avfilter-8.def" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/avfilter.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/avformat-59.def" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/avformat.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/avutil-57.def" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/avutil.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/libavcodec.dll.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/libavdevice.dll.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/libavfilter.dll.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/libavformat.dll.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/libavutil.dll.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/libpostproc.dll.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/libswresample.dll.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/libswscale.dll.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/pkgconfig/libavcodec.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/pkgconfig/libavdevice.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/pkgconfig/libavfilter.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/pkgconfig/libavformat.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/pkgconfig/libavutil.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/pkgconfig/libpostproc.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/pkgconfig/libswresample.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/pkgconfig/libswscale.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/postproc-56.def" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/postproc.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/swresample-4.def" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/swresample.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/swscale-6.def" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg-master-latest-win64-gpl-shared - copy/lib/swscale.lib" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_ff.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ff.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +253,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.test_ff">
     <configuration name="Backend test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="COMP702-703Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,8 +382,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.test_ff" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.Backend test" />
         <item itemvalue="Python.test_ffmpeg" />
         <item itemvalue="Python.test" />
