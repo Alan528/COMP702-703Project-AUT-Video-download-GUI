@@ -1,2 +1,4 @@
-echo Please restart the program... & pause
+@echo off
+echo Ffmpeg installed, Please restart the program...
+pause
 

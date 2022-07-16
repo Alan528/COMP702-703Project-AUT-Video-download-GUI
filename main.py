@@ -5,7 +5,7 @@ from libraries import *
 from notification_screen import *
 from download_bar import *
 import checkVideoExit
-import test_ff
+from test_ff import test_ff
 
 if __name__ == '__main__':
     class Application(Frame, object):
@@ -173,7 +173,7 @@ if __name__ == '__main__':
         def btn_open_download_clicked(self):
             os.system('explorer .\\Download')
 
-    test_ff.test_ff()
+    test_ff()
     root = Tk()
     root.resizable(False, False)
     app = Application(root)
