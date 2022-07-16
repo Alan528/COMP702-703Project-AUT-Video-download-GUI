@@ -75,7 +75,7 @@ if __name__ == '__main__':
                 bg="#ffffff",
                 borderwidth=0,
                 highlightthickness=0,
-                command=self.master.destroy,
+                command=self.btn_open_download_clicked,
                 relief="flat")
 
             self.cancel_btt.place(
@@ -167,7 +167,11 @@ if __name__ == '__main__':
 
         # Open douyin website when user clicked
         def btn_douyin_clicked(self):
-            webbrowser.open('https://www.douyin.com/')
+            webbrowser.open('https://www.douyin.com/discover')
+
+        # Open Download document when user clicked
+        def btn_open_download_clicked(self):
+            os.system('explorer .\\Download')
 
     test_ff.test_ff()
     root = Tk()
