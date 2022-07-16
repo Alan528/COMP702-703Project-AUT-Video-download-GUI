@@ -4,20 +4,42 @@
     <list default="true" id="0203eae5-7b05-4a81-b8d4-b79b87735cf1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AUT_Download_GUI.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AUT_Download_GUI.spec" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/AUT_Download_GUI.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/AUT_Download_GUI.pkg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/Analysis-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/EXE-00.toc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/PKG-00.toc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/PYZ-00.pyz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/PYZ-00.toc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/warn-AUT_Download_GUI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/warn-AUT_Download_GUI.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/xref-AUT_Download_GUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/AUT_Download_GUI/xref-AUT_Download_GUI.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/AUT_Download_GUI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/AUT_Download_GUI.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/notification_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restartmes.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/restartmes.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_ff.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/AUT_Video_Download.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/AUT_Video_Download.pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/Analysis-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/EXE-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/PKG-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/PYZ-00.pyz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/PYZ-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/Tree-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/Tree-01.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/Tree-02.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/warn-AUT_Video_Download.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Video_Download/xref-AUT_Video_Download.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/Analysis-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/EXE-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PKG-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PYZ-00.pyz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PYZ-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/Tree-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/Tree-01.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/Tree-02.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/main.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/main.pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/warn-main.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/xref-main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/AUT_Download_GUI.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/download_bar.py" beforeDir="false" afterPath="$PROJECT_DIR$/download_bar.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +75,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.undownload">
     <configuration name="Backend test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="COMP702-703Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,27 +97,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Install ffmpeg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="COMP702-703Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Install ffmpeg.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="COMP702-703Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,27 +110,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="COMP702-703Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,13 +160,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="undownload" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="COMP702-703Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/undownload.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.undownload" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.test_ff" />
         <item itemvalue="Python.Backend test" />
         <item itemvalue="Python.test_ffmpeg" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>

@@ -5,6 +5,8 @@ import DouyinSp
 from libraries import *
 from notification_screen import *
 import checkVideoExit
+import threading
+import sys
 
 # purpose of this global variable is let the system know which button has been clicked
 # and called exactly that function for downloading
@@ -121,6 +123,8 @@ class download(object):
     # Define action for button when user click on it. it will call the download in system.
 
     # function for downloading mp4 has sound, when user click on mp4 has sound button
+
+
     def dl_mp4_has_sound(self, inp):
 
         flag = 1
@@ -380,6 +384,10 @@ class download(object):
 
         return flag
 
+    def runa(self):
+        run = threading.Thread(target=self.dl_mp4_has_sound)
+        run.start()
+
         # function for downloading mp4 no sound, when user click on mp4 no sound button
     def dl_mp4_no_sound(self, inp):
         url = inp
@@ -568,6 +576,10 @@ class download(object):
                 windown_Exit = invalue_input_file_exist(self.top)
 
         return flag
+
+    def runb(self):
+        run = threading.Thread(target=self.dl_mp4_no_sound())
+        run.start()
 
     # function for downloading mp3, when user click on mp3 button
     def dl_mp3(self, inp):
@@ -766,3 +778,8 @@ class download(object):
                 windown_Exit = invalue_input_file_exist(self.top)
 
         return flag
+
+    def runc(self):
+        run = threading.Thread(target=self.dl_mp3())
+        run.start()
+
