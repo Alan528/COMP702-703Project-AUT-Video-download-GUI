@@ -6,6 +6,7 @@ from notification_screen import *
 from download_bar import *
 import checkVideoExit
 from test_ff import test_ff
+import threading
 
 if __name__ == '__main__':
     class Application(Frame, object):

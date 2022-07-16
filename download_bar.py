@@ -124,7 +124,6 @@ class download(object):
 
     # function for downloading mp4 has sound, when user click on mp4 has sound button
 
-
     def dl_mp4_has_sound(self, inp):
 
         flag = 1
@@ -347,7 +346,8 @@ class download(object):
             # print(response.text)
 
             title = \
-            re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
+                re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[
+                    0]
             s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
             for i in s:
                 title = title.replace(i, '')
@@ -367,7 +367,7 @@ class download(object):
                 chunk_size = 1024 * 1024 * 2
                 self.bar['maximum'] = video_size
 
-                with open("douyin_"+title + '.mp4', mode='wb') as f:
+                with open("douyin_" + title + '.mp4', mode='wb') as f:
                     for video_chunk in video.iter_content(chunk_size=chunk_size):
                         f.write(video_chunk)
                         print(len(video_chunk))
@@ -384,11 +384,8 @@ class download(object):
 
         return flag
 
-    def runa(self):
-        run = threading.Thread(target=self.dl_mp4_has_sound)
-        run.start()
-
         # function for downloading mp4 no sound, when user click on mp4 no sound button
+
     def dl_mp4_no_sound(self, inp):
         url = inp
         flag = 2
@@ -506,7 +503,7 @@ class download(object):
                     # move the video into Download folder
                     shutil.move(f'.\\youtube_NoS{title}.mp4', '.\\Download\\VideoNoSound')
                     tm.sleep(1)
-                    os.remove("compyoutube_NoS"+title + '.mp4')
+                    os.remove("compyoutube_NoS" + title + '.mp4')
                 except:
                     os.remove("compyoutube_NoS" + title + '.mp4')
                     tm.sleep(1)
@@ -533,7 +530,8 @@ class download(object):
             # print(response.text)
 
             title = \
-            re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
+                re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[
+                    0]
             s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
             for i in s:
                 title = title.replace(i, '')
@@ -577,16 +575,12 @@ class download(object):
 
         return flag
 
-    def runb(self):
-        run = threading.Thread(target=self.dl_mp4_no_sound())
-        run.start()
-
     # function for downloading mp3, when user click on mp3 button
     def dl_mp3(self, inp):
 
         url = inp
 
-        print("the user input in main screen passed into button function:  " + inp +"\n\n")
+        print("the user input in main screen passed into button function:  " + inp + "\n\n")
 
         flag = 3
         print("MP3 button clicked")
@@ -778,8 +772,3 @@ class download(object):
                 windown_Exit = invalue_input_file_exist(self.top)
 
         return flag
-
-    def runc(self):
-        run = threading.Thread(target=self.dl_mp3())
-        run.start()
-
