@@ -5,7 +5,6 @@ import DouyinSp
 from libraries import *
 from notification_screen import *
 import checkVideoExit
-import threading
 import sys
 
 # purpose of this global variable is let the system know which button has been clicked
@@ -18,7 +17,7 @@ douyin_checkurl = "www.douyin.com"
 
 class download(object):
 
-    # Creat GUI for download bar
+        # Creat GUI for download bar
     def __init__(dl, master, inp):
 
         # Create a tkinter frame
