@@ -4,10 +4,8 @@ import CheckVideo
 from libraries import *
 from notification_screen import *
 from download_bar import *
-import checkVideoExit
-from test_ff import test_ff
-import threading
 from undownload import del_file
+
 
 if __name__ == '__main__':
     class Application(Frame, object):
@@ -70,19 +68,19 @@ if __name__ == '__main__':
                 width=115,
                 height=50)
 
-            # Cancel button
-            self.cancel_img = PhotoImage(file=f"./image/main_page_cancel_btt.png")
-            self.cancel_btt = Button(
-                image=self.cancel_img,
+            # Open button button
+            self.open_img = PhotoImage(file=f"./image/btt_open_folder.png")
+            self.open_btt = Button(
+                image=self.open_img,
                 bg="#ffffff",
                 borderwidth=0,
                 highlightthickness=0,
                 command=self.btn_open_download_clicked,
                 relief="flat")
 
-            self.cancel_btt.place(
-                x=770, y=250,
-                width=115,
+            self.open_btt.place(
+                x=758, y=255,
+                width=137,
                 height=50)
 
             # Bilibili button
@@ -175,8 +173,8 @@ if __name__ == '__main__':
         def btn_open_download_clicked(self):
             os.system('explorer .\\Download')
 
-    test_ff()
     del_file()
+    test_ff()
     root = Tk()
     root.resizable(False, False)
     app = Application(root)

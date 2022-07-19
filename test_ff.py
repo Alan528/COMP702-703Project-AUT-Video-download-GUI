@@ -1,8 +1,4 @@
-import os
-import re
-import time
-import sys
-from tkinter import Toplevel
+from libraries import *
 
 
 def test_ff():

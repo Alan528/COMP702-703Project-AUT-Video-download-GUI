@@ -1,8 +1,7 @@
 import BilibiliSP
 import DouyinSp
 import YoutubeSp
-import re
-# import CheckVideo
+from libraries import *
 
 if __name__ == '__main__':
 

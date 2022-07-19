@@ -1,11 +1,4 @@
-import shutil
-import time
-import requests
-import re
-import json
-import os
-from tqdm import tqdm
-from moviepy.editor import VideoFileClip
+from libraries import *
 
 
 def bilibili(url, utype):
@@ -74,12 +67,12 @@ def bilibili(url, utype):
 
             cmd2 = f' ffmpeg  -i {title}.mp4 -i comp{title}.mp3 -acodec copy -vcodec copy bilibili_{title}.mp4'
             os.system(cmd2)
-            time.sleep(1)
+            tm.sleep(1)
             # clip = VideoFileClip(f"bilibili{title}.mp4")
             # newclip = clip.volumex(1)
             # newclip.write_videofile(f"bilibili_{title}.mp4")
             shutil.move(f'.\\bilibili_{title}.mp4', '.\\Download\\Video')
-            time.sleep(1)
+            tm.sleep(1)
 
             # delete the video amd audio that not join
             os.remove(title + '.mp4')

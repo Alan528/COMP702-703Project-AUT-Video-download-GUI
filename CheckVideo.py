@@ -1,7 +1,4 @@
-import requests
-import re
-import json
-
+from libraries import *
 
 def checkbilibili(url):
     headers = {

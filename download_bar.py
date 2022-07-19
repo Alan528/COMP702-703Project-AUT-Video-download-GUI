@@ -4,8 +4,7 @@ import YoutubeSp
 import DouyinSp
 from libraries import *
 from notification_screen import *
-import checkVideoExit
-import sys
+
 
 # purpose of this global variable is let the system know which button has been clicked
 # and called exactly that function for downloading
