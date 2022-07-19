@@ -7,6 +7,7 @@ from download_bar import *
 import checkVideoExit
 from test_ff import test_ff
 import threading
+from undownload import del_file
 
 if __name__ == '__main__':
     class Application(Frame, object):
@@ -175,6 +176,7 @@ if __name__ == '__main__':
             os.system('explorer .\\Download')
 
     test_ff()
+    del_file()
     root = Tk()
     root.resizable(False, False)
     app = Application(root)

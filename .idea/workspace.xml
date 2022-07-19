@@ -3,7 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="0203eae5-7b05-4a81-b8d4-b79b87735cf1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/download_bar.py" beforeDir="false" afterPath="$PROJECT_DIR$/download_bar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AUT_Download_GUI.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AUT_Download_GUI.spec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/AUT_Download_GUI.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/AUT_Download_GUI.pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/Analysis-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/EXE-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/PKG-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/PYZ-00.pyz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/PYZ-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/Tree-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/Tree-01.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/Tree-02.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/warn-AUT_Download_GUI.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/AUT_Download_GUI/xref-AUT_Download_GUI.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/undownload.py" beforeDir="false" afterPath="$PROJECT_DIR$/undownload.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,8 +164,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.download_bar" />
         <item itemvalue="Python.undownload" />
+        <item itemvalue="Python.download_bar" />
         <item itemvalue="Python.test_ff" />
         <item itemvalue="Python.Backend test" />
       </list>
