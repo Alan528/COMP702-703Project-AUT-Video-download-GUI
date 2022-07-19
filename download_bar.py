@@ -5,7 +5,6 @@ import DouyinSp
 from libraries import *
 from notification_screen import *
 
-
 # purpose of this global variable is let the system know which button has been clicked
 # and called exactly that function for downloading
 flag = 0
@@ -16,7 +15,7 @@ douyin_checkurl = "www.douyin.com"
 
 class download(object):
 
-        # Creat GUI for download bar
+    # Creat GUI for download bar
     def __init__(dl, master, inp):
 
         # Create a tkinter frame
@@ -234,6 +233,8 @@ class download(object):
                 else:
                     self.top = Toplevel()
                     windown_Exit = invalue_input_file_exist(self.top)
+
+
 
         # Download YouTube
         elif re.findall(youtube_checkurl, inp):
