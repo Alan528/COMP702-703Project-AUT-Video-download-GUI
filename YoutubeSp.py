@@ -16,7 +16,7 @@ def youtube(url, utype):
     # print(json_str)
     json_data = json.loads(json_str)
     video_url = json_data['streamingData']['adaptiveFormats'][0]['url']
-    audio_url = json_data['streamingData']['adaptiveFormats'][-2]['url']
+    audio_url = json_data['streamingData']['adaptiveFormats'][-1]['url']
 
     # print(video_url)
     # print(audio_url)
