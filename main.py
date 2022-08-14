@@ -1,5 +1,3 @@
-import BilibiliSP
-import YoutubeSp
 import CheckVideo
 from libraries import *
 from notification_screen import *

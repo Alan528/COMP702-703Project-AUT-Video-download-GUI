@@ -7,7 +7,7 @@ def del_file():
         if '.' in file:
             suffix = file.split('.')[-1]
 
-            if suffix == 'mp3' or suffix == 'mp4':
+            if suffix == 'mp3' or suffix == 'mp4' or suffix == 'webm':
                 os.remove(os.path.join(".", file))
 
 

@@ -10,7 +10,7 @@ import re
 import json
 import os
 from tqdm import tqdm
-from moviepy.editor import VideoFileClip
+from moviepy.editor import VideoFileClip, concatenate_videoclips, AudioFileClip
 import checkVideoExit
 from test_ff import test_ff
 import threading

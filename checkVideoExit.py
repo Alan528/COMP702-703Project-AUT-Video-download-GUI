@@ -81,7 +81,7 @@ def youtube(url):
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
-    Ex = (f'youtube_{title}.mp4')
+    Ex = (f'{title}.webm')
     print(Ex)
     path = f".\\Download\\Video\\{Ex}"
     checkex = os.path.exists(path)
@@ -106,7 +106,7 @@ def youtubenosvideo(url):
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
 
-    Exvideo = (f'youtube_NoS{title}.mp4')
+    Exvideo = (f'youtubeNos{title}.webm')
     print(Exvideo)
     path = f".\\Download\\VideoNoSound\\{Exvideo}"
     checkex = os.path.exists(path)
@@ -132,7 +132,7 @@ def youtubeaudio(url):
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
 
-    Exaudio = (f'youtube_{title}.mp3')
+    Exaudio = (f'{title}.mp3')
     print(Exaudio)
     path = f".\\Download\\Audio\\{Exaudio}"
     checkex = os.path.exists(path)
