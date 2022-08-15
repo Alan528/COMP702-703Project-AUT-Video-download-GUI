@@ -422,12 +422,12 @@ class download(object):
                 cmd = f"yt-dlp -o, --output {title} {inp}"
                 os.system(cmd)
 
-                clip = VideoFileClip(f"{title}.webm")
-                newclip = clip.volumex(0)
-                newclip.write_videofile(f"youtubeNos{title}.webm")
+                videot = VideoFileClip(f"{title}.webm")
+                videot = videot.without_audio()
+                videot.write_videofile(f"youtubeNos{title}.webm")
 
                 shutil.move(f"youtubeNos{title}.webm", "Download/VideoNoSound")
-                os.remove(f"{title}.webm")
+                # os.remove(f"{title}.webm")
 
                 self.top = Toplevel()
                 windown_download = download_complete(self.top)
