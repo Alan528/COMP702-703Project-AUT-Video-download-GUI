@@ -66,14 +66,14 @@ if __name__ == '__main__':
                 width=115,
                 height=50)
 
-            # Open button button
-            self.open_img = PhotoImage(file=f"./image/btt_open_folder.png")
+            # Cancel button button
+            self.open_img = PhotoImage(file=f"./image/main_page_cancel_btt.png")
             self.open_btt = Button(
                 image=self.open_img,
                 bg="#ffffff",
                 borderwidth=0,
                 highlightthickness=0,
-                command=self.btn_open_download_clicked,
+                command=self.master.destroy,
                 relief="flat")
 
             self.open_btt.place(
