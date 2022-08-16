@@ -155,17 +155,31 @@ if __name__ == '__main__':
             else:
                 windown_download = invalue_input(self.top)
 
-        # Open youtube website when user clicked
-        def btn_youtube_clicked(self):
-            webbrowser.open('https://www.youtube.com/')
-
         # Open bilibili website when user clicked
         def btn_bilibili_clicked(self):
-            webbrowser.open('https://www.bilibili.com/')
+            inp = self.textbox.get()
+            if inp == "":
+                webbrowser.open('https://www.bilibili.com/')
+            else:
+                webbrowser.open(f'https://search.bilibili.com/all?keyword={inp}')
+
+        # Open youtube website when user clicked
+        def btn_youtube_clicked(self):
+            inp = self.textbox.get()
+            if inp == "":
+                webbrowser.open('https://www.youtube.com/')
+            else:
+                webbrowser.open(f'https://www.youtube.com/results?search_query={inp}')
+
 
         # Open douyin website when user clicked
         def btn_douyin_clicked(self):
-            webbrowser.open('https://www.douyin.com/discover')
+            inp = self.textbox.get()
+            if inp == "":
+                webbrowser.open('https://www.douyin.com/discover')
+            else:
+                webbrowser.open(f'https://www.douyin.com/search/{inp}')
+
 
         # Open Download document when user clicked
         def btn_open_download_clicked(self):
