@@ -12,6 +12,7 @@ youtube_checkurl = "www.youtube.com"
 douyin_checkurl = "www.douyin.com"
 
 
+
 class download(object):
 
     # Creat GUI for download bar

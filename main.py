@@ -127,7 +127,7 @@ if __name__ == '__main__':
 
             bilibili_checkurl = "www.bilibili.com"
             youtube_checkurl = "www.youtube.com"
-            douuyin_checkurl = "www.douyin.com"
+            douyin_checkurl = "www.douyin.com"
 
             self.top = Toplevel()
             inp = self.textbox.get()
@@ -145,7 +145,7 @@ if __name__ == '__main__':
                 except:
                     window_load = invalue_input_youtube_exist(self.top)
 
-            elif re.findall(douuyin_checkurl, inp):
+            elif re.findall(douyin_checkurl, inp):
                 try:
                     CheckVideo.checkdouyin(inp)
                     windown_download = download(self.top, inp)
@@ -160,6 +160,8 @@ if __name__ == '__main__':
             inp = self.textbox.get()
             if inp == "":
                 webbrowser.open('https://www.bilibili.com/')
+            elif re.findall(bilibili_checkurl, inp):
+                webbrowser.open(inp)
             else:
                 webbrowser.open(f'https://search.bilibili.com/all?keyword={inp}')
 
@@ -168,6 +170,8 @@ if __name__ == '__main__':
             inp = self.textbox.get()
             if inp == "":
                 webbrowser.open('https://www.youtube.com/')
+            elif re.findall(youtube_checkurl, inp):
+                webbrowser.open(inp)
             else:
                 webbrowser.open(f'https://www.youtube.com/results?search_query={inp}')
 
@@ -177,6 +181,8 @@ if __name__ == '__main__':
             inp = self.textbox.get()
             if inp == "":
                 webbrowser.open('https://www.douyin.com/discover')
+            elif re.findall(douyin_checkurl, inp):
+                webbrowser.open(inp)
             else:
                 webbrowser.open(f'https://www.douyin.com/search/{inp}')
 
