@@ -435,12 +435,10 @@ class download(object):
                 cmd = f"yt-dlp -o, --output {title} {inp}"
                 os.system(cmd)
 
-                videot = VideoFileClip(f"{title}.webm")
-                videot = videot.without_audio()
-                videot.write_videofile(f"youtubeNos{title}.webm")
-
+                cmd2 = f"ffmpeg -i {title}.webm -c:v copy -an youtubeNos{title}.webm"
+                os.system(cmd2)
+                os.remove(f"{title}.webm")
                 shutil.move(f"youtubeNos{title}.webm", "Download/VideoNoSound")
-                # os.remove(f"{title}.webm")
 
                 self.top = Toplevel()
                 windown_download = download_complete(self.top)
@@ -490,9 +488,9 @@ class download(object):
                         self.bar['value'] += len(video_chunk)
                         self.bar.update()
 
-                videot = VideoFileClip(f"{title}.mp4")
-                videot = videot.without_audio()
-                videot.write_videofile(f"douyin_NoS{title}.mp4")
+                cmd1 = f"ffmpeg -i {title}.mp4 -c:v copy -an douyin_NoS{title}.mp4"
+                os.system(cmd1)
+
                 shutil.move(f'.\\douyin_NoS{title}.mp4',
                             '.\\Download\\VideoNoSound')
                 cmd = "taskkill /f /t /im ffmpeg-win64-v4.2.2.exe"
@@ -625,8 +623,10 @@ class download(object):
                 # Download audio
                 cmd = f"yt-dlp -o, --output {title} {inp}"
                 os.system(cmd)
-                audi_clip = AudioFileClip(f"{title}.webm")
-                audi_clip.write_audiofile(f"./Download/Audio/{title}.mp3")
+
+                cmd1 = f"ffmpeg -i {title}.webm -acodec libmp3lame {title}.mp3"
+                os.system(cmd1)
+                shutil.move(f"{title}.mp3","Download/Audio")
                 os.remove(f"{title}.webm")
 
                 self.top = Toplevel()

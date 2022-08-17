@@ -52,19 +52,19 @@ if __name__ == '__main__':
                 height=39)
             
             #Open Download file
-            self.img=Image.open('btt_open_folder.png')
+            self.img=Image.open('./image/btt_open_folder.png')
             self.img_temp = self.img.resize((49,40), Image.ANTIALIAS)
-            self.open_img = ImageTk.PhotoImage(self.img_temp)
+            self.folder_img = ImageTk.PhotoImage(self.img_temp)
 
-            self.open_btt = Button(
-                image = self.open_img,
+            self.folder_btt = Button(
+                image = self.folder_img,
                 bg = "#ffffff",
                 borderwidth = 0,
                 highlightthickness = 0,
-                command = self.btn_open_download_clicked(),
+                command = self.btn_open_download_clicked,
                 relief = "flat")
 
-            self.open_btt.place(
+            self.folder_btt.place(
                 x = 931, y = 191,
                 width = 49,
                 height = 40)
