@@ -11,8 +11,6 @@ bilibili_checkurl = "www.bilibili.com"
 youtube_checkurl = "www.youtube.com"
 douyin_checkurl = "www.douyin.com"
 
-
-
 class download(object):
 
     # Creat GUI for download bar
@@ -49,7 +47,8 @@ class download(object):
             image=dl.background_img)
 
         # Download bar process
-        dl.bar = Progressbar(dl.master, orient='horizontal', length=300, mode='determinate')
+        dl.bar = Progressbar(dl.master, orient='horizontal',
+                             length=300, mode='determinate')
         dl.bar.pack(pady=35)
 
         # MP4 has sound button
@@ -153,12 +152,14 @@ class download(object):
                     print(f'Video Title："{title}"')
                     # print("Downloading")
 
-                    playinfo = re.findall('<script>window.__playinfo__=(.*?)</script>', response.text)[0]
+                    playinfo = re.findall(
+                        '<script>window.__playinfo__=(.*?)</script>', response.text)[0]
 
                     # print(playinfo)
                     # print(type(playinfo))
 
-                    json_playinfo = json.loads(playinfo)  # trun playinfo type to dict
+                    # trun playinfo type to dict
+                    json_playinfo = json.loads(playinfo)
                     # print(type(json_playinfo))
                     # pprint.pprint(json_playinfo) #formating output
 
@@ -172,7 +173,8 @@ class download(object):
                     # video_content = requests.get(url=video_url, headers=headers, stream=True).content
 
                     # Download video
-                    video = requests.get(url=video_url, headers=headers, stream=True)
+                    video = requests.get(
+                        url=video_url, headers=headers, stream=True)
                     video_size = int(video.headers.get('Content-Length'))
                     self.bar['value'] = 0
                     chunk_size = 1024 * 1024 * 2
@@ -187,7 +189,8 @@ class download(object):
                             self.bar.update()
 
                     # Download audio
-                    audio = requests.get(url=audio_url, headers=headers, stream=True)
+                    audio = requests.get(
+                        url=audio_url, headers=headers, stream=True)
                     audio_size = int(audio.headers.get('Content-Length'))
                     self.bar['value'] = 0
                     chunk_size = 1024 * 1024 * 2
@@ -212,7 +215,8 @@ class download(object):
                         # clip = VideoFileClip(f"bilibili{title}.mp4")
                         # newclip = clip.volumex(1)
                         # newclip.write_videofile(f"bilibili_{title}.mp4")
-                        shutil.move(f'.\\bilibili_{title}.mp4', '.\\Download\\Video')
+                        shutil.move(
+                            f'.\\bilibili_{title}.mp4', '.\\Download\\Video')
                         tm.sleep(1)
 
                         # delete the video amd audio that not join
@@ -244,7 +248,8 @@ class download(object):
                 }
                 respons = requests.get(url=url, headers=headers)
                 print(respons)
-                json_str = re.findall('var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
+                json_str = re.findall(
+                    'var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
                 # print(json_str)
                 json_data = json.loads(json_str)
                 video_url = json_data['streamingData']['adaptiveFormats'][0]['url']
@@ -296,12 +301,14 @@ class download(object):
 
                 # print(response.text)
                 video_url = re.findall('src(.*?)src%22%3A%', response.text)[0]
-                video_url = requests.utils.unquote(video_url).replace('":"', 'http:')
+                video_url = requests.utils.unquote(
+                    video_url).replace('":"', 'http:')
 
                 # print(video_url)
                 # video_content = requests.get(url=video_url, headers=headers).content
 
-                video = requests.get(url=video_url, headers=headers, stream=True)
+                video = requests.get(
+                    url=video_url, headers=headers, stream=True)
                 video_size = int(video.headers.get('Content-Length'))
                 self.bar['value'] = 0
                 chunk_size = 1024 * 1024 * 2
@@ -350,12 +357,14 @@ class download(object):
                 print(f'Video Title："{title}"')
                 # print("Downloading")
 
-                playinfo = re.findall('<script>window.__playinfo__=(.*?)</script>', response.text)[0]
+                playinfo = re.findall(
+                    '<script>window.__playinfo__=(.*?)</script>', response.text)[0]
 
                 # print(playinfo)
                 # print(type(playinfo))
 
-                json_playinfo = json.loads(playinfo)  # trun playinfo type to dict
+                # trun playinfo type to dict
+                json_playinfo = json.loads(playinfo)
                 # print(type(json_playinfo))
                 # pprint.pprint(json_playinfo) #formating output
 
@@ -368,7 +377,8 @@ class download(object):
                 # audio_content = requests.get(url=audio_url, headers=headers, stream=True).content
                 # video_content = requests.get(url=video_url, headers=headers, stream=True).content
 
-                video = requests.get(url=video_url, headers=headers, stream=True)
+                video = requests.get(
+                    url=video_url, headers=headers, stream=True)
                 video_size = int(video.headers.get('Content-Length'))
                 self.bar['value'] = 0
                 chunk_size = 1024 * 1024 * 2
@@ -382,7 +392,8 @@ class download(object):
                         self.bar['value'] += len(video_chunk)
                         self.bar.update()
                 # move the video into Download folder
-                shutil.move(f'.\\bilibili_NoS{title}.mp4', '.\\Download\\VideoNoSound')
+                shutil.move(
+                    f'.\\bilibili_NoS{title}.mp4', '.\\Download\\VideoNoSound')
                 self.bar['value'] = 0
                 self.top = Toplevel()
                 windown_download = download_complete(self.top)
@@ -400,7 +411,8 @@ class download(object):
                 }
                 respons = requests.get(url=url, headers=headers)
                 # print(respons)
-                json_str = re.findall('var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
+                json_str = re.findall(
+                    'var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
                 # print(json_str)
                 json_data = json.loads(json_str)
                 video_url = json_data['streamingData']['adaptiveFormats'][0]['url']
@@ -450,18 +462,21 @@ class download(object):
             title = \
                 re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[
                     0]
-            s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+            s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+                 '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
             for i in s:
                 title = title.replace(i, '')
             print(f'Video Title："{title}"')
 
             # print(response.text)
             video_url = re.findall('src(.*?)src%22%3A%', response.text)[0]
-            video_url = requests.utils.unquote(video_url).replace('":"', 'http:')
+            video_url = requests.utils.unquote(
+                video_url).replace('":"', 'http:')
 
             if not checkVideoExit.douyinnosvideo(inp):
 
-                video = requests.get(url=video_url, headers=headers, stream=True)
+                video = requests.get(
+                    url=video_url, headers=headers, stream=True)
                 video_size = int(video.headers.get('Content-Length'))
                 self.bar['value'] = 0
                 chunk_size = 1024 * 1024 * 2
@@ -478,7 +493,8 @@ class download(object):
                 videot = VideoFileClip(f"{title}.mp4")
                 videot = videot.without_audio()
                 videot.write_videofile(f"douyin_NoS{title}.mp4")
-                shutil.move(f'.\\douyin_NoS{title}.mp4', '.\\Download\\VideoNoSound')
+                shutil.move(f'.\\douyin_NoS{title}.mp4',
+                            '.\\Download\\VideoNoSound')
                 cmd = "taskkill /f /t /im ffmpeg-win64-v4.2.2.exe"
                 os.system(cmd)
                 tm.sleep(1)
@@ -520,7 +536,8 @@ class download(object):
             print(f'Video Title："{title}"')
             # print("Downloading")
 
-            playinfo = re.findall('<script>window.__playinfo__=(.*?)</script>', response.text)[0]
+            playinfo = re.findall(
+                '<script>window.__playinfo__=(.*?)</script>', response.text)[0]
 
             # print(playinfo)
             # print(type(playinfo))
@@ -541,7 +558,8 @@ class download(object):
             if not checkVideoExit.bilibiliaudio(inp):
 
                 # Download audio
-                audio = requests.get(url=audio_url, headers=headers, stream=True)
+                audio = requests.get(
+                    url=audio_url, headers=headers, stream=True)
                 audio_size = int(audio.headers.get('Content-Length'))
                 self.bar['value'] = 0
                 chunk_size = 1024 * 1024 * 2
@@ -559,7 +577,8 @@ class download(object):
                     cmd1 = f"ffmpeg -i {title}.mp3 -f mp3 bilibili_{title}.mp3"
                     os.system(cmd1)
                     # move the video into Download folder
-                    shutil.move(f'.\\bilibili_{title}.mp3', '.\\Download\\Audio')
+                    shutil.move(
+                        f'.\\bilibili_{title}.mp3', '.\\Download\\Audio')
                     os.remove(title + ".mp3")
                     print("Completed Download")
                     self.bar['value'] = 0
@@ -581,7 +600,8 @@ class download(object):
             }
             respons = requests.get(url=url, headers=headers)
             # print(respons)
-            json_str = re.findall('var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
+            json_str = re.findall(
+                'var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
             # print(json_str)
             json_data = json.loads(json_str)
             video_url = json_data['streamingData']['adaptiveFormats'][0]['url']
@@ -591,7 +611,8 @@ class download(object):
             # print(audio_url)
 
             title = json_data['videoDetails']['title']
-            s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+            s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+                 '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
             for i in s:
                 title = title.replace(i, '')
             print(f'Video Title："{title}"')
@@ -630,18 +651,21 @@ class download(object):
             title = \
                 re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[
                     0]
-            s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+            s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+                 '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
             for i in s:
                 title = title.replace(i, '')
             print(f'Video Title："{title}"')
 
             # print(response.text)
             video_url = re.findall('src(.*?)src%22%3A%', response.text)[0]
-            video_url = requests.utils.unquote(video_url).replace('":"', 'http:')
+            video_url = requests.utils.unquote(
+                video_url).replace('":"', 'http:')
 
             if not checkVideoExit.douyinaudio(inp):
 
-                video = requests.get(url=video_url, headers=headers, stream=True)
+                video = requests.get(
+                    url=video_url, headers=headers, stream=True)
                 video_size = int(video.headers.get('Content-Length'))
                 self.bar['value'] = 0
                 chunk_size = 1024 * 1024 * 2

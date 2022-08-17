@@ -7,9 +7,11 @@ def bilibilivideo(url):
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36'
     }
     response = requests.get(url=url, headers=headers)
+
     # print(response.text) #get the web data
     title = re.findall('<h1 title="(.*?)"', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+         '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -28,9 +30,11 @@ def bilibilinosvideo(url):
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36'
     }
     response = requests.get(url=url, headers=headers)
+
     # print(response.text) #get the web data
     title = re.findall('<h1 title="(.*?)"', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+         '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -49,9 +53,11 @@ def bilibiliaudio(url):
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36'
     }
     response = requests.get(url=url, headers=headers)
+
     # print(response.text) #get the web data
     title = re.findall('<h1 title="(.*?)"', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+         '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -72,12 +78,16 @@ def youtube(url):
     }
     respons = requests.get(url=url, headers=headers)
     # print(respons)
-    json_str = re.findall('var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
+
+    json_str = re.findall(
+        'var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
     # print(json_str)
+
     json_data = json.loads(json_str)
 
     title = json_data['videoDetails']['title']
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+         '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -96,12 +106,16 @@ def youtubenosvideo(url):
     }
     respons = requests.get(url=url, headers=headers)
     # print(respons)
-    json_str = re.findall('var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
+
+    json_str = re.findall(
+        'var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
     # print(json_str)
+
     json_data = json.loads(json_str)
 
     title = json_data['videoDetails']['title']
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+         '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -122,12 +136,16 @@ def youtubeaudio(url):
     }
     respons = requests.get(url=url, headers=headers)
     # print(respons)
-    json_str = re.findall('var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
+
+    json_str = re.findall(
+        'var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
     # print(json_str)
+
     json_data = json.loads(json_str)
 
     title = json_data['videoDetails']['title']
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+         '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -139,9 +157,6 @@ def youtubeaudio(url):
     print(checkex)
     return checkex
 
-
-
-
 def douyin(url):
     headers = {
 
@@ -150,8 +165,10 @@ def douyin(url):
     }
     response = requests.get(url=url, headers=headers)
     # print(response.text)
-    title = re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+    title = re.findall(
+        '<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+         '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -162,7 +179,6 @@ def douyin(url):
     checkex = os.path.exists(path)
     return checkex
 
-
 def douyinnosvideo(url):
     headers = {
 
@@ -171,8 +187,10 @@ def douyinnosvideo(url):
     }
     response = requests.get(url=url, headers=headers)
     # print(response.text)
-    title = re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+    title = re.findall(
+        '<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+         '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')
@@ -184,7 +202,6 @@ def douyinnosvideo(url):
     print(checkex)
     return checkex
 
-
 def douyinaudio(url):
     headers = {
 
@@ -193,8 +210,10 @@ def douyinaudio(url):
     }
     response = requests.get(url=url, headers=headers)
     # print(response.text)
-    title = re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
-    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+    title = re.findall(
+        '<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>', response.text)[0]
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+         '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
     for i in s:
         title = title.replace(i, '')
     print(f'Video Title："{title}"')

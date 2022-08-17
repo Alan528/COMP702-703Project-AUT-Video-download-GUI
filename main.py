@@ -1,3 +1,5 @@
+
+
 import CheckVideo
 from libraries import *
 from notification_screen import *
@@ -50,7 +52,25 @@ if __name__ == '__main__':
                 x=460.0, y=190,
                 width=446.0,
                 height=39)
+            
+            #Open Download file
+            self.img=Image.open('image/btt_open_folder_1.png')
+            self.img_temp = self.img.resize((49,40), Image.ANTIALIAS)
+            self.folder_img = ImageTk.PhotoImage(self.img_temp)
 
+            self.btt_folder_img = Button(
+            image = self.folder_img,
+            bg="#ffffff",
+            borderwidth = 0,
+            highlightthickness = 0,
+            command = self.btn_open_download_clicked,
+            relief = "flat")
+
+            self.btt_folder_img.place(
+            x = 931, y = 191,
+            width = 49,
+            height = 40)
+            
             # Download button
             self.download_img = PhotoImage(file=f"./image/main_page_download_btt.png")
             self.download_btt = Button(
@@ -66,8 +86,8 @@ if __name__ == '__main__':
                 width=115,
                 height=50)
 
-            # Cancel button button
-            self.open_img = PhotoImage(file=f"./image/main_page_cancel_btt.png")
+            # Exit button
+            self.open_img = PhotoImage(file=f"./image/main_page_exit_btt.png")
             self.open_btt = Button(
                 image=self.open_img,
                 bg="#ffffff",
@@ -77,8 +97,8 @@ if __name__ == '__main__':
                 relief="flat")
 
             self.open_btt.place(
-                x=758, y=255,
-                width=137,
+                x=762, y=256,
+                width=115,
                 height=50)
 
             # Bilibili button

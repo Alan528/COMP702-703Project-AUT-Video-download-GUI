@@ -8,7 +8,7 @@ def checkbilibili(url):
     }
     response = requests.get(url=url, headers=headers)
     playinfo = re.findall('<script>window.__playinfo__=(.*?)</script>', response.text)[0]
-    json_playinfo = json.loads(playinfo)  # 转换playinfo数据类型为字典
+    json_playinfo = json.loads(playinfo)
     audio_url = json_playinfo['data']['dash']['audio'][0]['baseUrl']
     video_url = json_playinfo['data']['dash']['video'][0]['baseUrl']
 
@@ -33,8 +33,6 @@ def checkdouyin(url):
 
     }
     response = requests.get(url=url, headers=headers)
-    # print(response.text)
 
-    # print(response.text)
     video_url = re.findall('src(.*?)src%22%3A%', response.text)[0]
     video_url = requests.utils.unquote(video_url).replace('":"', 'http:')
