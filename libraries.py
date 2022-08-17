@@ -14,7 +14,7 @@ from moviepy.editor import VideoFileClip, concatenate_videoclips, AudioFileClip
 import checkVideoExit
 from test_ff import test_ff
 import threading
-
 import sys
 from tkinter import Toplevel
+from PIL import ImageTk, Image
 
