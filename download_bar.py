@@ -2,8 +2,6 @@
 from libraries import *
 from notification_screen import *
 
-import threading
-
 # purpose of this global variable is let the system know which button has been clicked
 # and called exactly that function for downloading
 flag = 0

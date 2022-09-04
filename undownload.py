@@ -1,4 +1,4 @@
-import os
+from libraries import *
 
 def del_file():
     files = os.listdir(".")

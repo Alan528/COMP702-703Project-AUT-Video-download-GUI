@@ -36,7 +36,8 @@ if __name__ == '__main__':
                 image=self.background_img)
 
             # Creat a textbox
-            self.textbox_img = PhotoImage(file=f"./image/main_page_textBox.png")
+            self.textbox_img = PhotoImage(
+                file=f"./image/main_page_textBox.png")
             self.textbox_bg = self.canvas.create_image(
                 683.0, 210.5,
                 image=self.textbox_img)
@@ -50,27 +51,28 @@ if __name__ == '__main__':
                 x=460.0, y=190,
                 width=446.0,
                 height=39)
-            
-            #Open Download file
-            self.img=Image.open('./image/btt_open_folder.png')
-            self.img_temp = self.img.resize((49,40), Image.ANTIALIAS)
+
+            # Open Download file
+            self.img = Image.open('./image/btt_open_folder.png')
+            self.img_temp = self.img.resize((49, 40), Image.ANTIALIAS)
             self.folder_img = ImageTk.PhotoImage(self.img_temp)
 
             self.folder_btt = Button(
-                image = self.folder_img,
-                bg = "#ffffff",
-                borderwidth = 0,
-                highlightthickness = 0,
-                command = self.btn_open_download_clicked,
-                relief = "flat")
+                image=self.folder_img,
+                bg="#ffffff",
+                borderwidth=0,
+                highlightthickness=0,
+                command=self.btn_open_download_clicked,
+                relief="flat")
 
             self.folder_btt.place(
-                x = 931, y = 191,
-                width = 49,
-                height = 40)
-            
+                x=931, y=191,
+                width=49,
+                height=40)
+
             # Download button
-            self.download_img = PhotoImage(file=f"./image/main_page_download_btt.png")
+            self.download_img = PhotoImage(
+                file=f"./image/main_page_download_btt.png")
             self.download_btt = Button(
                 image=self.download_img,
                 bg="#ffffff",
@@ -80,7 +82,7 @@ if __name__ == '__main__':
                 relief="flat")
 
             self.download_btt.place(
-                x=484, y=256,
+                x=445, y=256,
                 width=115,
                 height=50)
 
@@ -95,8 +97,23 @@ if __name__ == '__main__':
                 relief="flat")
 
             self.open_btt.place(
-                x=762, y=256,
+                x=806, y=256,
                 width=115,
+                height=50)
+
+            #Instant Download Button
+            self.instant_download_img = PhotoImage(file=f"btt_instant_download.png")
+            self.instant_download_btt = Button(
+                image=self.instant_download_img,
+                bg="#ffffff",
+                borderwidth=0,
+                highlightthickness=0,
+                command="", #@Jian-Tao please add the function in this line
+                relief="flat")
+
+            self.instant_download_btt.place(
+                x=594, y=306,
+                width=187,
                 height=50)
 
             # Bilibili button
@@ -109,7 +126,7 @@ if __name__ == '__main__':
                 relief="flat")
 
             self.Bilibili_btt.place(
-                x=417, y=441,
+                x=417, y=459,
                 width=171,
                 height=65)
 
@@ -123,7 +140,7 @@ if __name__ == '__main__':
                 relief="flat")
 
             self.douyin_btt.place(
-                x=613, y=441,
+                x=613, y=459,
                 width=171,
                 height=65)
 
@@ -137,7 +154,7 @@ if __name__ == '__main__':
                 relief="flat")
 
             self.youtube_btt.place(
-                x=809, y=441,
+                x=809, y=459,
                 width=171,
                 height=65)
 
