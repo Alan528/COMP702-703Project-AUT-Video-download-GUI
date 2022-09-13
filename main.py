@@ -102,7 +102,7 @@ if __name__ == '__main__':
                 height=50)
 
             #Instant Download Button
-            self.instant_download_img = PhotoImage(file=f"btt_instant_download.png")
+            self.instant_download_img = PhotoImage(file=f"image/btt_instant_download.png")
             self.instant_download_btt = Button(
                 image=self.instant_download_img,
                 bg="#ffffff",
