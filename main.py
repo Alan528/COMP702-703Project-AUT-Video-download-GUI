@@ -108,7 +108,7 @@ if __name__ == '__main__':
                 bg="#ffffff",
                 borderwidth=0,
                 highlightthickness=0,
-                command="", #@Jian-Tao please add the function in this line
+                command=self.btn_instant_download, #@Jian-Tao please add the function in this line
                 relief="flat")
 
             self.instant_download_btt.place(
@@ -189,6 +189,47 @@ if __name__ == '__main__':
 
             else:
                 windown_download = invalue_input(self.top)
+
+        def btn_instant_download(self):
+            youtube_checkurl = "www.youtube.com"
+
+            self.top = Toplevel()
+            inp = self.textbox.get()
+
+            if re.findall(youtube_checkurl, inp):
+
+                    headers = {
+                        'cookie': 'VISITOR_INFO1_LIVE=En-lfqNNXQw; PREF=tz=Asia.Hong_Kong&f4=4000000&f5=30000; GPS=1; YSC=o1EVGXJ0H7I',
+                        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.124 Safari/537.36',
+                        'referer': 'https://www.youtube.com'
+                    }
+                    respons = requests.get(url=inp, headers=headers)
+                    print(respons)
+                    json_str = re.findall(
+                        'var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
+                    # print(json_str)
+                    json_data = json.loads(json_str)
+                    video_url = json_data['streamingData']['adaptiveFormats'][0]['url']
+                    audio_url = json_data['streamingData']['adaptiveFormats'][-1]['url']
+
+                    # print(video_url)
+                    # print(audio_url)
+
+                    title = json_data['videoDetails']['title']
+                    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&',
+                         ';', '.']
+                    for i in s:
+                        title = title.replace(i, '')
+                    print(f'Video Title："{title}"')
+
+                    cmd = f"yt-dlp -o, --output {title} -P, --paths \Download\Video {inp}"
+                    os.system(cmd)
+
+                    print('Download completed')
+
+            windown_download = download_complete(self.top)
+
+
 
         # Open bilibili website when user clicked
         def btn_bilibili_clicked(self):

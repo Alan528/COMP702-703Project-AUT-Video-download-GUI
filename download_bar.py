@@ -245,31 +245,89 @@ class download(object):
                     'referer': 'https://www.youtube.com'
                 }
                 respons = requests.get(url=url, headers=headers)
-                print(respons)
-                json_str = re.findall(
-                    'var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
+                # print(respons)
+                json_str = re.findall('var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
                 # print(json_str)
                 json_data = json.loads(json_str)
                 video_url = json_data['streamingData']['adaptiveFormats'][0]['url']
-                audio_url = json_data['streamingData']['adaptiveFormats'][-1]['url']
+                audio_url = json_data['streamingData']['adaptiveFormats'][-2]['url']
 
                 # print(video_url)
                 # print(audio_url)
 
                 title = json_data['videoDetails']['title']
-                s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&',
-                     ';', '.']
+                s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';',
+                     '.']
                 for i in s:
                     title = title.replace(i, '')
                 print(f'Video Title："{title}"')
 
-                cmd = f"yt-dlp -o, --output {title} -P, --paths \Download\Video {inp}"
-                os.system(cmd)
+                print("Downloading...")
+                # audio_content = requests.get(url=audio_url, headers=headers, stream=True).content
+                # video_content = requests.get(url=video_url, headers=headers, stream=True).content
 
-                print('Download completed')
+                if not checkVideoExit.youtube(inp):
 
-                self.top = Toplevel()
-                windown_download = download_complete(self.top)
+                    # Download video
+                    video = requests.get(url=video_url, headers=headers, stream=True)
+                    video_size = int(video.headers.get('Content-Length'))
+                    self.bar['value'] = 0
+                    chunk_size = 1024 * 1024 * 2
+                    self.bar['maximum'] = video_size
+
+                    with open(title + '.mp4', mode='wb') as f:
+                        for video_chunk in video.iter_content(chunk_size=chunk_size):
+                            f.write(video_chunk)
+                            print(len(video_chunk))
+                            print(video_size)
+                            self.bar['value'] += len(video_chunk)
+                            self.bar.update()
+
+                    # Download audio
+                    audio = requests.get(url=audio_url, headers=headers, stream=True)
+                    audio_size = int(audio.headers.get('Content-Length'))
+                    self.bar['value'] = 0
+                    chunk_size = 1024 * 1024 * 2
+                    self.bar['maximum'] = audio_size
+
+                    with open(title + '.mp3', mode='wb') as f:
+                        for audio_chunk in audio.iter_content(chunk_size=chunk_size):
+                            f.write(audio_chunk)
+                            print(len(audio_chunk))
+                            print(audio_size)
+                            self.bar['value'] += len(audio_chunk)
+                            self.bar.update()
+                    try:
+                        cmd1 = f"ffmpeg -i {title}.mp3 -f mp3 comp{title}.mp3"
+                        os.system(cmd1)
+                        tm.sleep(1)
+
+                        cmd2 = f' ffmpeg  -i {title}.mp4 -i comp{title}.mp3 -acodec copy -vcodec copy youtube_{title}.mp4'
+                        # use cmd run ffmpeg join video and video
+                        os.system(cmd2)
+                        tm.sleep(1)
+
+                        # move the video into Download folder
+                        shutil.move(f'.\\youtube_{title}.mp4', '.\\Download\\Video')
+                        tm.sleep(1)
+
+                        # delete the video amd audio that not join
+                        os.remove(title + '.mp4')
+                        tm.sleep(1)
+                        os.remove(title + '.mp3')
+                        tm.sleep(1)
+                        os.remove("comp" + title + ".mp3")
+                        tm.sleep(1)
+                        print('Download completed')
+
+                        # this code for displaying a downloaded notification
+                        self.bar['value'] = 0
+                        self.top = Toplevel()
+                        windown_download = download_complete(self.top)
+
+                    except:
+                        os.remove(title + '.mp4')
+                        os.remove(title + '.mp3')
 
             else:
                 self.top = Toplevel()
@@ -430,16 +488,47 @@ class download(object):
                 # audio_content = requests.get(url=audio_url, headers=headers, stream=True).content
                 # video_content = requests.get(url=video_url, headers=headers, stream=True).content
 
-                cmd = f"yt-dlp -o, --output {title} {inp}"
-                os.system(cmd)
+                video = requests.get(url=video_url, headers=headers, stream=True)
+                video_size = int(video.headers.get('Content-Length'))
+                self.bar['value'] = 0
+                chunk_size = 1024 * 1024 * 2
+                self.bar['maximum'] = video_size
 
-                cmd2 = f"ffmpeg -i {title}.webm -c:v copy -an youtubeNos{title}.webm"
-                os.system(cmd2)
-                os.remove(f"{title}.webm")
-                shutil.move(f"youtubeNos{title}.webm", "Download/VideoNoSound")
+                with open("compyoutube_NoS" + title + '.mp4', mode='wb') as f:
+                    for video_chunk in video.iter_content(chunk_size=chunk_size):
+                        f.write(video_chunk)
+                        print(len(video_chunk))
+                        print(video_size)
+                        self.bar['value'] += len(video_chunk)
+                        self.bar.update()
+                tm.sleep(1)
+                try:
+                    cmd = f"ffmpeg -i compyoutube_NoS{title}.mp4 -f mp4 youtube_NoS{title}.mp4"
+                    os.system(cmd)
 
+                    # move the video into Download folder
+                    shutil.move(f'.\\youtube_NoS{title}.mp4', '.\\Download\\VideoNoSound')
+                    tm.sleep(1)
+                    os.remove("compyoutube_NoS" + title + '.mp4')
+                except:
+                    os.remove("compyoutube_NoS" + title + '.mp4')
+                    tm.sleep(1)
+
+                    os.remove("compyoutube_NoS" + title + '.mp4')
+
+                # move the video into Download folder
+                self.bar['value'] = 0
                 self.top = Toplevel()
                 windown_download = download_complete(self.top)
+
+
+                # cmd = f"yt-dlp -o, --output {title} {inp}"
+                # os.system(cmd)
+                #
+                # cmd2 = f"ffmpeg -i {title}.webm -c:v copy -an youtubeNos{title}.webm"
+                # os.system(cmd2)
+                # os.remove(f"{title}.webm")
+                # shutil.move(f"youtubeNos{title}.webm", "Download/VideoNoSound")
 
             else:
                 self.top = Toplevel()
@@ -619,20 +708,75 @@ class download(object):
 
             if not checkVideoExit.youtubeaudio(inp):
                 # Download audio
-                cmd = f"yt-dlp -o, --output {title} {inp}"
-                os.system(cmd)
 
-                cmd1 = f"ffmpeg -i {title}.webm -acodec libmp3lame {title}.mp3"
-                os.system(cmd1)
-                shutil.move(f"{title}.mp3","Download/Audio")
-                os.remove(f"{title}.webm")
+                headers = {
+                    'cookie': 'VISITOR_INFO1_LIVE=En-lfqNNXQw; PREF=tz=Asia.Hong_Kong&f4=4000000&f5=30000; GPS=1; YSC=o1EVGXJ0H7I',
+                    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.124 Safari/537.36',
+                    'referer': 'https://www.youtube.com'
+                }
+                respons = requests.get(url=url, headers=headers)
+                # print(respons)
+                json_str = re.findall('var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
+                # print(json_str)
+                json_data = json.loads(json_str)
+                video_url = json_data['streamingData']['adaptiveFormats'][0]['url']
+                audio_url = json_data['streamingData']['adaptiveFormats'][-2]['url']
 
-                self.top = Toplevel()
-                windown_download = download_complete(self.top)
+                # print(video_url)
+                # print(audio_url)
 
+                title = json_data['videoDetails']['title']
+                s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';',
+                     '.']
+                for i in s:
+                    title = title.replace(i, '')
+                print(f'Video Title："{title}"')
+
+                print("Downloading...")
+                # audio_content = requests.get(url=audio_url, headers=headers, stream=True).content
+                # video_content = requests.get(url=video_url, headers=headers, stream=True).content
+
+                # Download audio
+                audio = requests.get(url=audio_url, headers=headers, stream=True)
+                audio_size = int(audio.headers.get('Content-Length'))
+                self.bar['value'] = 0
+                chunk_size = 1024 * 1024 * 2
+                self.bar['maximum'] = audio_size
+
+                with open(title + '.mp3', mode='wb') as f:
+                    for audio_chunk in audio.iter_content(chunk_size=chunk_size):
+                        f.write(audio_chunk)
+                        print(len(audio_chunk))
+                        print(audio_size)
+                        self.bar['value'] += len(audio_chunk)
+                        self.bar.update()
+                try:
+                    cmd = f"ffmpeg -i {title}.mp3 -f mp3 youtube_{title}.mp3"
+                    os.system(cmd)
+
+                    # move the video into Download folder
+                    shutil.move(f'.\\youtube_{title}.mp3', '.\\Download\\Audio')
+                    tm.sleep(1)
+                    os.remove(title + '.mp3')
+                    self.bar['value'] = 0
+                    self.top = Toplevel()
+                    windown_download = download_complete(self.top)
+                except:
+                    os.remove(title + '.mp3')
             else:
                 self.top = Toplevel()
                 windown_Exit = invalue_input_file_exist(self.top)
+
+
+
+            # cmd = f"yt-dlp -o, --output {title} {inp}"
+            # os.system(cmd)
+            #
+            # cmd1 = f"ffmpeg -i {title}.webm -acodec libmp3lame {title}.mp3"
+            # os.system(cmd1)
+            # shutil.move(f"{title}.mp3","Download/Audio")
+            # os.remove(f"{title}.webm")
+
 
         # Download Douyin Audio
         elif re.findall(douyin_checkurl, inp):
