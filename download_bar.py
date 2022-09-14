@@ -345,9 +345,7 @@ class download(object):
                 response = requests.get(url=url, headers=headers)
                 # print(response.text)
 
-                title = \
-                    re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>',
-                               response.text)[
+                title = re.findall('<meta data-react-helmet="true" name="lark:url:video_title" content=(.*?)/>',response.text)[
                         0]
                 s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&', ';',
                      '.']
@@ -355,13 +353,18 @@ class download(object):
                     title = title.replace(i, '')
                 print(f'Video Title："{title}"')
 
-                # print(response.text)
-                video_url = re.findall('src(.*?)src%22%3A%', response.text)[0]
-                video_url = requests.utils.unquote(
-                    video_url).replace('":"', 'http:')
+                html_data = re.findall('<script id="RENDER_DATA" type="application/json">(.*?)</script',response.text)[0]
+                # print(html_data)
+                html_data = requests.utils.unquote(html_data)
+                # print(String_html)
+                json_data = json.loads(html_data)
 
+                # print(json_data)
+                # print(type(json_data))
+                # pprint(json_data)
+
+                video_url = 'https:'+json_data['1']['videoDetail']['video']['bitRateList'][0]['playAddr'][0]['src']
                 # print(video_url)
-                # video_content = requests.get(url=video_url, headers=headers).content
 
                 video = requests.get(
                     url=video_url, headers=headers, stream=True)
@@ -381,9 +384,11 @@ class download(object):
                 shutil.move(f'.\\douyin_{title}.mp4', '.\\Download\\Video')
                 self.top = Toplevel()
                 windown_download = download_complete(self.top)
+
             else:
                 self.top = Toplevel()
                 windown_Exit = invalue_input_file_exist(self.top)
+
 
     #
     # # function for downloading mp4 no sound, when user click on mp4 no sound button
@@ -554,9 +559,18 @@ class download(object):
             print(f'Video Title："{title}"')
 
             # print(response.text)
-            video_url = re.findall('src(.*?)src%22%3A%', response.text)[0]
-            video_url = requests.utils.unquote(
-                video_url).replace('":"', 'http:')
+            html_data = re.findall('<script id="RENDER_DATA" type="application/json">(.*?)</script', response.text)[0]
+            # print(html_data)
+            html_data = requests.utils.unquote(html_data)
+            # print(String_html)
+            json_data = json.loads(html_data)
+
+            # print(json_data)
+            # print(type(json_data))
+            # pprint(json_data)
+
+            video_url = 'https:' + json_data['1']['videoDetail']['video']['bitRateList'][0]['playAddr'][0]['src']
+            # print(video_url)
 
             if not checkVideoExit.douyinnosvideo(inp):
 
@@ -800,9 +814,18 @@ class download(object):
             print(f'Video Title："{title}"')
 
             # print(response.text)
-            video_url = re.findall('src(.*?)src%22%3A%', response.text)[0]
-            video_url = requests.utils.unquote(
-                video_url).replace('":"', 'http:')
+            html_data = re.findall('<script id="RENDER_DATA" type="application/json">(.*?)</script', response.text)[0]
+            # print(html_data)
+            html_data = requests.utils.unquote(html_data)
+            # print(String_html)
+            json_data = json.loads(html_data)
+
+            # print(json_data)
+            # print(type(json_data))
+            # pprint(json_data)
+
+            video_url = 'https:' + json_data['1']['videoDetail']['video']['bitRateList'][0]['playAddr'][0]['src']
+            # print(video_url)
 
             if not checkVideoExit.douyinaudio(inp):
 
