@@ -1,4 +1,6 @@
 # Import the libraries file
+import time
+
 from libraries import *
 from notification_screen import *
 
@@ -128,6 +130,7 @@ class download(object):
         print("============")
         # print(video_size)
         print("============")
+
 
         if re.findall(bilibili_checkurl, inp):
 
@@ -399,6 +402,7 @@ class download(object):
         print("MP4 no sound button clicked")
         print("value button:", flag, "\n\n")
 
+
         if re.findall(bilibili_checkurl, inp):
             if not checkVideoExit.bilibilinosvideo(inp):
 
@@ -616,6 +620,8 @@ class download(object):
         flag = 3
         print("MP3 button clicked")
         print("value button:", flag, "\n\n")
+
+
 
         if re.findall(bilibili_checkurl, inp):
 
