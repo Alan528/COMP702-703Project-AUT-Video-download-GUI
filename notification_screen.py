@@ -316,7 +316,7 @@ class invalue_input_file_exist(object):
                              relief="ridge")
         text_canvas.place(x=0, y=50)
         text_canvas.create_text(200, 15, fill="#000000", font="Roboto 12 roman",
-                                text="The file exited, ")
+                                text="File already exits")
 
         # exit button
         self.exit_img = PhotoImage(file=f"./image/exit_red_btt.png")
