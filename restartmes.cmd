@@ -1,4 +1,4 @@
 @echo off
 echo ffmpeg installed, Please restart the program...
-pause
-
+start AUT_Download_GUI.exe
+exit
