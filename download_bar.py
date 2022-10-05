@@ -356,18 +356,29 @@ class download(object):
                     title = title.replace(i, '')
                 print(f'Video Title："{title}"')
 
-                html_data = re.findall('<script id="RENDER_DATA" type="application/json">(.*?)</script',response.text)[0]
-                # print(html_data)
-                html_data = requests.utils.unquote(html_data)
-                # print(String_html)
-                json_data = json.loads(html_data)
+                try:
+                    html_data = re.findall('<script id="RENDER_DATA" type="application/json">(.*?)</script',response.text)[0]
+                    # print(html_data)
+                    html_data = requests.utils.unquote(html_data)
+                    # print(String_html)
+                    json_data = json.loads(html_data)
 
-                # print(json_data)
-                # print(type(json_data))
-                # pprint(json_data)
+                    # print(json_data)
+                    # print(type(json_data))
+                    # pprint(json_data)
 
-                video_url = 'https:'+json_data['1']['videoDetail']['video']['bitRateList'][0]['playAddr'][0]['src']
-                # print(video_url)
+                    video_url = 'https:'+json_data['1']['videoDetail']['video']['bitRateList'][0]['playAddr'][0]['src']
+                    # print(video_url)
+                except:
+                    pass
+
+                try:
+                    video_url = re.findall('src(.*?)src%22%3A%', response.text)[0]
+                    video_url = requests.utils.unquote(video_url).replace('":"', 'http:')
+                    # print(video_url)
+
+                except:
+                    pass
 
                 video = requests.get(
                     url=video_url, headers=headers, stream=True)
@@ -563,18 +574,29 @@ class download(object):
             print(f'Video Title："{title}"')
 
             # print(response.text)
-            html_data = re.findall('<script id="RENDER_DATA" type="application/json">(.*?)</script', response.text)[0]
-            # print(html_data)
-            html_data = requests.utils.unquote(html_data)
-            # print(String_html)
-            json_data = json.loads(html_data)
+            try:
+                html_data = re.findall('<script id="RENDER_DATA" type="application/json">(.*?)</script', response.text)[
+                    0]
+                # print(html_data)
+                html_data = requests.utils.unquote(html_data)
+                # print(String_html)
+                json_data = json.loads(html_data)
 
-            # print(json_data)
-            # print(type(json_data))
-            # pprint(json_data)
+                # print(json_data)
+                # print(type(json_data))
+                # pprint(json_data)
 
-            video_url = 'https:' + json_data['1']['videoDetail']['video']['bitRateList'][0]['playAddr'][0]['src']
-            # print(video_url)
+                video_url = 'https:' + json_data['1']['videoDetail']['video']['bitRateList'][0]['playAddr'][0]['src']
+                # print(video_url)
+            except:
+                pass
+
+            try:
+                video_url = re.findall('src(.*?)src%22%3A%', response.text)[0]
+                video_url = requests.utils.unquote(video_url).replace('":"', 'http:')
+                # print(video_url)
+            except:
+                pass
 
             if not checkVideoExit.douyinnosvideo(inp):
 
@@ -820,18 +842,29 @@ class download(object):
             print(f'Video Title："{title}"')
 
             # print(response.text)
-            html_data = re.findall('<script id="RENDER_DATA" type="application/json">(.*?)</script', response.text)[0]
-            # print(html_data)
-            html_data = requests.utils.unquote(html_data)
-            # print(String_html)
-            json_data = json.loads(html_data)
+            try:
+                html_data = re.findall('<script id="RENDER_DATA" type="application/json">(.*?)</script', response.text)[
+                    0]
+                # print(html_data)
+                html_data = requests.utils.unquote(html_data)
+                # print(String_html)
+                json_data = json.loads(html_data)
 
-            # print(json_data)
-            # print(type(json_data))
-            # pprint(json_data)
+                # print(json_data)
+                # print(type(json_data))
+                # pprint(json_data)
 
-            video_url = 'https:' + json_data['1']['videoDetail']['video']['bitRateList'][0]['playAddr'][0]['src']
-            # print(video_url)
+                video_url = 'https:' + json_data['1']['videoDetail']['video']['bitRateList'][0]['playAddr'][0]['src']
+                # print(video_url)
+            except:
+                pass
+
+            try:
+                video_url = re.findall('src(.*?)src%22%3A%', response.text)[0]
+                video_url = requests.utils.unquote(video_url).replace('":"', 'http:')
+                # print(video_url)
+            except:
+                pass
 
             if not checkVideoExit.douyinaudio(inp):
 
