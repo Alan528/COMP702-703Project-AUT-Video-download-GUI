@@ -218,8 +218,8 @@ if __name__ == '__main__':
                     # print(audio_url)
 
                     title = json_data['videoDetails']['title']
-                    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）', '、', '|', '/', '\\', '"', '【', '】', '&',
-                         ';', '.']
+                    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+                         '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
                     for i in s:
                         title = title.replace(i, '')
                     print(f'Video Title："{title}"')
