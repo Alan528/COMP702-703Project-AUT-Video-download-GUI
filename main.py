@@ -228,7 +228,6 @@ if __name__ == '__main__':
                     print(f'Video Title："{title}"')
 
                     if not checkVideoExit.youtubeinst(inp):
-                        windown_load = downloading_remid(self.top)
 
                         cmd = f"yt-dlp -o, --output {title}.webm -P, --paths \Download\Video {inp}"
                         os.system(cmd)
