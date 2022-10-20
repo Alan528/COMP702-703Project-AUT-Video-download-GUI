@@ -309,14 +309,16 @@ class invalue_input_file_exist(object):
 
         text_canvas = Canvas(self.master,
                              bg="#ffffff",
-                             height=30,
+                             height=50,
                              width=400,
                              bd=0,
                              highlightthickness=0,
                              relief="ridge")
-        text_canvas.place(x=0, y=50)
-        text_canvas.create_text(200, 15, fill="#000000", font="Roboto 12 roman",
-                                text="File already exits")
+        text_canvas.place(x=0, y=45)
+        text_canvas.create_text(200, 13, fill="#000000", font="Roboto 12 roman",
+                                text=" File already exists,")
+        text_canvas.create_text(200, 32, fill="#000000", font="Roboto 12 roman",
+                                text="please check the \"Download\" folder!")
 
         # exit button
         self.exit_img = PhotoImage(file=f"./image/exit_red_btt.png")

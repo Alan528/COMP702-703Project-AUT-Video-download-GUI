@@ -1,4 +1,5 @@
 import CheckVideo
+import checkVideoExit
 from libraries import *
 from notification_screen import *
 from download_bar import *
@@ -197,7 +198,8 @@ if __name__ == '__main__':
             inp = self.textbox.get()
 
             if re.findall(youtube_checkurl, inp):
-
+                try:
+                    CheckVideo.checkyoutube(inp)
                     headers = {
                         'cookie': 'VISITOR_INFO1_LIVE=En-lfqNNXQw; PREF=tz=Asia.Hong_Kong&f4=4000000&f5=30000; GPS=1; YSC=o1EVGXJ0H7I',
                         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.124 Safari/537.36',
@@ -222,13 +224,21 @@ if __name__ == '__main__':
                         title = title.replace(i, '')
                     print(f'Video Title："{title}"')
 
-                    cmd = f"yt-dlp -o, --output {title} -P, --paths \Download\Video {inp}"
-                    os.system(cmd)
+                    if not checkVideoExit.youtubeinst(inp):
+                        cmd = f"yt-dlp -o, --output {title}.webm -P, --paths \Download\Video {inp}"
+                        os.system(cmd)
 
-                    print('Download completed')
+                        print('Download completed')
 
-            windown_download = download_complete(self.top)
+                        windown_download = download_complete(self.top)
+                    else:
+                        window_load = invalue_input_file_exist(self.top)
 
+                except:
+                    window_load = invalue_input_youtube_exist(self.top)
+
+            else:
+                window_load = invalue_input_youtube_exist(self.top)
 
 
         # Open bilibili website when user clicked

@@ -98,6 +98,35 @@ def youtube(url):
     return checkex
 
 
+def youtubeinst(url):
+    headers = {
+        'cookie': 'VISITOR_INFO1_LIVE=En-lfqNNXQw; PREF=tz=Asia.Hong_Kong&f4=4000000&f5=30000; GPS=1; YSC=o1EVGXJ0H7I',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.124 Safari/537.36',
+        'referer': 'https://www.youtube.com'
+    }
+    respons = requests.get(url=url, headers=headers)
+    # print(respons)
+
+    json_str = re.findall(
+        'var ytInitialPlayerResponse = (.*?);var', respons.text)[0]
+    # print(json_str)
+
+    json_data = json.loads(json_str)
+
+    title = json_data['videoDetails']['title']
+    s = ['\n', '，', '。', ' ', '—', '”', '？', '“', '（', '）',
+         '、', '|', '/', '\\', '"', '【', '】', '&', ';', '.']
+    for i in s:
+        title = title.replace(i, '')
+    print(f'Video Title："{title}"')
+    Ex = (f'{title}.webm')
+    print(Ex)
+    path = f".\\Download\\Video\\{Ex}"
+    checkex = os.path.exists(path)
+    return checkex
+
+
+
 def youtubenosvideo(url):
     headers = {
         'cookie': 'VISITOR_INFO1_LIVE=En-lfqNNXQw; PREF=tz=Asia.Hong_Kong&f4=4000000&f5=30000; GPS=1; YSC=o1EVGXJ0H7I',
