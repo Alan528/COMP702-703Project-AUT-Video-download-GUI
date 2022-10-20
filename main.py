@@ -1,3 +1,5 @@
+import time
+
 import CheckVideo
 import checkVideoExit
 from libraries import *
@@ -192,10 +194,11 @@ if __name__ == '__main__':
                 windown_download = invalue_input(self.top)
 
         def btn_instant_download(self):
-            youtube_checkurl = "www.youtube.com"
 
+            youtube_checkurl = "www.youtube.com"
             self.top = Toplevel()
             inp = self.textbox.get()
+
 
             if re.findall(youtube_checkurl, inp):
                 try:
@@ -225,12 +228,14 @@ if __name__ == '__main__':
                     print(f'Video Title："{title}"')
 
                     if not checkVideoExit.youtubeinst(inp):
+
                         cmd = f"yt-dlp -o, --output {title}.webm -P, --paths \Download\Video {inp}"
                         os.system(cmd)
 
                         print('Download completed')
 
-                        windown_download = download_complete(self.top)
+                        windown_load = download_complete(self.top)
+
                     else:
                         window_load = invalue_input_file_exist(self.top)
 
